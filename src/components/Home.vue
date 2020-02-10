@@ -3,7 +3,7 @@
   <v-parallax
     dark
     src="../assets/parax.svg"
-    height="350"
+    height="400"
   >
   <v-container
   class="grey lighten-5"
