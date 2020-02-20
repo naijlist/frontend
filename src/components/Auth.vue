@@ -30,7 +30,7 @@
                     <v-btn color="indigo lighten-1" dark rounded type="submit" @click="login">Login</v-btn>
                     
                         <v-spacer></v-spacer>
-                        <router-link to="user">
+                        <router-link to="user" style="text-decoration: none">
                         <v-btn color="success" rounded text>Register</v-btn>
                     </router-link>
 

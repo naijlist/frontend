@@ -48,7 +48,7 @@
                 <v-card-actions>
                     <v-btn color="indigo lighten-1" dark rounded type="submit" @click="login">Sign up</v-btn>
                         <v-spacer></v-spacer>
-                    <router-link to="auth">
+                    <router-link to="auth" style="text-decoration: none">
                     <v-btn color="success" rounded text>Login</v-btn>
                     </router-link>
                 </v-card-actions>
