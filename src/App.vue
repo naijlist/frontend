@@ -28,12 +28,13 @@
         /> -->
 
       <v-spacer></v-spacer>
-
-      <v-btn text rounded>
+      <router-link to="user">
+         <v-btn text rounded>
         <span class="mr-2">Sign-up</span>
         <v-icon>mdi-user</v-icon>
       </v-btn>
-      <router-link to="/login">
+      </router-link>
+      <router-link to="auth">
          <v-btn text rounded>
         <span class="mr-2">Sign-in</span>
         <v-icon>mdi-user</v-icon>

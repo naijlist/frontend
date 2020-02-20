@@ -1,83 +1,91 @@
 <template>
 <div>
-  <v-parallax
-    dark
-    src="../assets/parax.svg"
-    height="400"
-  >
-  <v-container
-  class="grey lighten-5"
-  style="margin-top:270px !important"
-  >
-    <v-row
-      align="center"
-      justify="center"
-    >
-      <v-col 
-      class="text-center" 
-      md="4" 
-      cols="12"
-      >
-       <v-text-field
-       label="What are you looking for?"
-       hint="Enter a key word to search what you are looking for"
-       color="orange"
-       rounded
-       outlined
-       filled
-       >
+  <v-card class="mx-auto">
+    <v-card-text>
+      <v-row>
+      <v-col cols="12">
+        <v-row justify="center" align="end" style="height: 300px;">
+          <v-col
+            cols="6"
+            xl="4"
+            lg="4"
+            md="4"
+            sm="4"
+            xs="4"
+            >
+            <v-text-field
+              label="What are you looking for?"
+              hint="Enter a key word to search what you are looking for"
+              outlined
+              rounded
+              dense>
+            </v-text-field>
+          </v-col>
 
-       </v-text-field>
-      </v-col>
-       <v-col 
-       class="mt-0"
-      md="3"
-      cols="12"
-      >
-       <v-text-field
-       append-icon="place"
-       label="Location"
-       rounded
-       outlined
-       color="orange"
-       filled
-       >
-
-       </v-text-field>
-      </v-col>
-       <!-- <v-col 
-      class="text-center" 
-      md="3" 
-      cols="12"
-      >
-       <v-select
-       color="white"
-      :items="['Computers & Laptops', 'Phones', 'House Hold']"
-      label="Categories"
-      outlined
-      rounded
-      filled=""
-    ></v-select>
-      </v-col> -->
-      <v-col 
-      class="text-center" 
-      md="2" 
-      cols="12"
-      >
-       <v-btn color="cyan" style="margin-bottom: 30px;" rounded outlined x-large> Search</v-btn>
+          <v-col
+            cols="6"
+            xl="3"
+            lg="3"
+            md="3"
+            sm="3"
+            xs="3"
+            >
+            <v-text-field
+             append-icon="place"
+             label="Location"
+              outlined
+              rounded
+              dense>
+              </v-text-field>
+          </v-col>
+          <v-col
+            cols="6"
+            xl="2"
+            lg="2"
+            md="2"
+            sm="2"
+            xs="2"
+            >
+            <v-btn
+              color="cyan" 
+              style="margin-bottom: 30px;" 
+              rounded 
+              outlined> Search</v-btn>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
-  </v-container>
-  </v-parallax>
+    </v-card-text>
+  </v-card>
   <CatGrid />
+  <ListedAds/>
 </div>
 </template>
 <script>
 import CatGrid from './CategoryGrid'
+import ListedAds from './ListedAds'
 export default {
   name: 'Home',
   components:{
-    CatGrid
+    CatGrid,
+    ListedAds
+  },
+  data(){
+    return{
+
+    }
   }
 };
 </script>
+<style scoped>
+  /* .indexCard{
+    background-image: url('../assets/parax.svg');
+    background-attachment: fixed;
+    background-size: cover;
+
+  } */
+  .indexForm{
+    margin-top: 270px;
+    margin-left: 250px;
+  }
+</style>

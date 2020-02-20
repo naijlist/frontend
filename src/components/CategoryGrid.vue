@@ -2,28 +2,34 @@
   <v-container class="grey lighten-5">
     <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
     <v-row>
-      <v-col
-        v-for="n in categories"
-        :key="n"
-        cols="4"
-        md="6"
-        xs="6"
-        lg="2"
-      >
-        <v-card
-          class="pa-2 text-center"
-          outlined
-          tile
-        >
-        <div class="focus-layout">
-            <div class="focus-image">
-            <v-icon>{{n.icon}}</v-icon>
-            </div>
-            <h4 class="clrchg">{{n.name}}</h4>
-        </div>
-        </v-card>
-      </v-col>
+        <v-col cols="12">
+            <v-row justify="start">
+                <v-col
+                    v-for="n in categories"
+                    :key="n"
+                    cols="4"
+                    md="2"
+                    sm="4"
+                    xs="4"
+                    lg="2"
+                    xl="2"
+                >
+                    <v-card
+                        class="pa-2 text-center"
+                        outlined
+                        tile
+                        max-height="200px"
+                        height="120px"
+                        style="cursor:pointer;"
+                        >
+                            <v-icon size="60">{{n.icon}}</v-icon>
+                            <p class="clrchg">{{n.name}}</p>
+                    </v-card>
+                </v-col>
+            </v-row>
+        </v-col>
     </v-row>
+
   </v-container>
 </template>
 
@@ -74,7 +80,7 @@ export default {
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
-.focus-image {
+.icons {
     text-align: center;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
@@ -82,7 +88,7 @@ export default {
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
 }
-.focus-image i {
+.icons i{
     font-size: 40px;
     color: #fff;
     background: #dd0908;
