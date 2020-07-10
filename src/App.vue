@@ -2,12 +2,14 @@
   <v-app>
     <v-app-bar
       app
-      color="indigo lighten-1"
+      color="teal lighten-1"
       dark
       fixed
+      class="hidden-sm-and-down"
+      dense
     >
     <router-link to="/">
-        <v-toolbar-title style="cursor: pointer;" dark>Name Can't Be blank </v-toolbar-title>
+        <v-toolbar-title style="cursor: pointer;" dark><v-img src="../public/main.png" /> </v-toolbar-title>
     </router-link>    
         <!-- <v-img
           alt="Vuetify Logo"
@@ -28,35 +30,59 @@
         /> -->
 
       <v-spacer></v-spacer>
-      <router-link to="user">
-         <v-btn text rounded>
+         <v-btn text rounded to="user">
         <span class="mr-2">Sign-up</span>
-        <v-icon>mdi-user</v-icon>
+        <v-icon>mdi-account-plus-outline</v-icon>
       </v-btn>
-      </router-link>
-      <router-link to="auth">
-         <v-btn text rounded>
+      <v-divider vertical></v-divider>
+         <v-btn text rounded to="auth">
         <span class="mr-2">Sign-in</span>
-        <v-icon>mdi-user</v-icon>
+        <v-icon>mdi-account-outline</v-icon>
       </v-btn>
-      </router-link>
+      <v-divider vertical></v-divider>
       <v-btn text rounded>
         <span class="mr-2">Post Ads</span>
-        <v-icon>mdi-user</v-icon>
+        <v-icon>mdi-plus-circle-outline</v-icon>
       </v-btn>
     </v-app-bar>
 
-    <v-content>
+    <v-content class="hidden-sm-and-down">
       <router-view></router-view>
     </v-content>
+    <v-content class="hidden-md-and-up" style="padding: 0px">
+      <router-view></router-view>
+    </v-content>
+  <v-bottom-navigation
+    shift
+    fixed
+    color="teal"
+    grow
+    class="hidden-md-and-up"
+  >
+    <v-btn to="/">
+      <span>Home</span>
+      <v-icon>mdi-home-outline</v-icon>
+    </v-btn>
+
+    <v-btn>
+      <span>Post ads</span>
+      <v-icon>mdi-plus-circle-outline</v-icon>
+    </v-btn>
+
+    <v-btn>
+      <span>Account</span>
+      <v-icon>mdi-account-outline</v-icon>
+    </v-btn>
+  </v-bottom-navigation>
     <v-footer
     dark
     padless
+    class="hidden-sm-and-down"
   >
     <v-card
       flat
       tile
-      class="indigo lighten-1 white--text text-center"
+      class="teal lighten-1 white--text text-center"
     >
       <v-card-text>
         <v-btn
@@ -102,5 +128,8 @@ export default {
         'fab fa-instagram',
       ]
   }),
+  methods:{
+    
+  }
 };
 </script>

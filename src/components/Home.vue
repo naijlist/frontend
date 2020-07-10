@@ -1,9 +1,9 @@
 <template>
-<div>
-  <v-card class="mx-auto">
+<div class="grey lighten-2">
+  <v-card class="mx-auto hidden-sm-and-down">
     <v-card-text>
       <v-row>
-      <v-col cols="12">
+      <v-col cols="12" >
         <v-row justify="center" align="end" style="height: 300px;">
           <v-col
             cols="6"
@@ -57,8 +57,42 @@
     </v-row>
     </v-card-text>
   </v-card>
-  <CatGrid />
+  <v-card class="mx-auto hidden-md-and-up">
+    <v-card-text>
+      <v-row>
+        <v-container>
+          <v-text-field
+              label="Looking for?"
+              hint="Enter a key word to search what you are looking for"
+              outlined
+              rounded
+              dense
+              >
+              </v-text-field>
+        <v-text-field
+              label="Location"
+              hint="Enter a key word to search what you are looking for"
+              outlined
+              rounded
+              dense
+              append-icon="place"
+              >
+              </v-text-field>
+        <v-btn
+              color="cyan" 
+              style="margin-bottom: 30px;" 
+              rounded 
+              outlined
+              block="true"
+              > <v-icon>search</v-icon> </v-btn>
+        </v-container>
+      </v-row>
+    </v-card-text>
+  </v-card>
+  <v-container >
+    <CatGrid />
   <ListedAds/>
+  </v-container>
 </div>
 </template>
 <script>
@@ -73,6 +107,11 @@ export default {
   data(){
     return{
 
+    }
+  },
+  methods:{
+    search(){
+      console.log('clicked');
     }
   }
 };

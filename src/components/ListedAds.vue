@@ -4,14 +4,14 @@
             <v-col cols="12">
                 <v-row justify="start">
                     <v-col
-                        v-for="n in 10"
+                        v-for="n in 2"
                         :key="n"
-                        cols="4"
+                        cols="6"
                         xl="3"
                         lg="3"
                         md="3"
-                        sm="4"
-                        xs="4"
+                        sm="6"
+                        xs="6"
                     >
                         <v-card
                             :loading="loading"
@@ -19,6 +19,7 @@
                         >
                         <v-img
                         height="150px"
+                        max-height="150px"
                         src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
                         ></v-img>
                       

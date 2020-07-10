@@ -1,31 +1,27 @@
 <template>
+<div class="grey lighten-2">
     <v-container>
-        <v-card width="400" class="mx-auto mt-5 mb-5">
+        <v-card width="400" class="mx-auto mt-5 mb-5" flat>
         <v-card-title>
-        <h1 class="display-1">Register here</h1>
+        <p class="pl-4 pt-2 mb-0">Sign-up here</p>
         </v-card-title>
+        <v-divider></v-divider>
         <v-card-text>
             <v-form @submit.prevent>
                  <v-text-field 
-                label="First name"
-                v-model="form.firstname"
+                label="Full name"
+                v-model="form.fullname"
                 rounded
                 outlined
                 dense
                 />
                  <v-text-field 
-                label="Last name"
-                v-model="form.lastname"
+                label="Email"
+                v-model="form.email"
                 rounded
                 outlined
                 dense
-                />
-                <v-text-field 
-                label="Username"
-                v-model="form.username"
-                rounded
-                outlined
-                dense
+                autocomplete="off"
                 />
                  <v-text-field 
                 label="Phone number"
@@ -41,21 +37,20 @@
                 rounded
                 outlined
                 dense
-                :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+                :append-icon="showPassword ? 'mdi-eye-outline' : 'mdi-eye-off-outline'"
                 @click:append="showPassword = !showPassword"
                 />
                 <v-divider></v-divider>
                 <v-card-actions>
-                    <v-btn color="indigo lighten-1" dark rounded type="submit" @click="login">Sign up</v-btn>
+                    <v-btn color="success" dark rounded to="auth" outlined>Login</v-btn>
                         <v-spacer></v-spacer>
-                    <router-link to="auth" style="text-decoration: none">
-                    <v-btn color="success" rounded text>Login</v-btn>
-                    </router-link>
+                    <v-btn color="success" dark rounded type="submit" @click="login">Sign up</v-btn>
                 </v-card-actions>
             </v-form>
         </v-card-text>
     </v-card>
     </v-container>
+    </div>
 </template>
 <script>
 export default {
