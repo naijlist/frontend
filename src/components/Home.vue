@@ -18,6 +18,7 @@
               hint="Enter a key word to search what you are looking for"
               outlined
               rounded
+              color="teal lighten-1"
               dense>
             </v-text-field>
           </v-col>
@@ -33,6 +34,7 @@
             <v-text-field
              append-icon="place"
              label="Location"
+             color="teal lighten-1"
               outlined
               rounded
               dense>
@@ -47,7 +49,7 @@
             xs="2"
             >
             <v-btn
-              color="cyan" 
+              color="teal lighten-1" 
               style="margin-bottom: 30px;" 
               rounded 
               outlined> Search</v-btn>
@@ -67,6 +69,7 @@
               outlined
               rounded
               dense
+              color="teal lighten-1"
               >
               </v-text-field>
         <v-text-field
@@ -75,11 +78,12 @@
               outlined
               rounded
               dense
+              color="teal lighten-1"
               append-icon="place"
               >
               </v-text-field>
         <v-btn
-              color="cyan" 
+              color="teal lighten-1" 
               style="margin-bottom: 30px;" 
               rounded 
               outlined

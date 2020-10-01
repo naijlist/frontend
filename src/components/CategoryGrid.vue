@@ -1,55 +1,33 @@
 <template>
-
-    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-    <v-row>
-        <v-col cols="12">
-            <v-row justify="start">
-                <v-col
-                    v-for="n in categories"
-                    :key="n.icon"
-                    cols="4"
-                    md="2"
-                    sm="4"
-                    xs="4"
-                    lg="2"
-                    xl="2"
-                >
-                <div class="text-center">
-                    <v-card
-                        class="pa-2"
-                        outlined
-                        tile
-                        width="200"
-                        style="cursor:pointer; border-radius:50px;"
-                        >
-                            <v-icon size="60" :color="n.color">{{n.icon}}</v-icon>
-                    </v-card>
-                            <p>{{n.name}}</p>
-                </div>
-                    
-
-                </v-col>
-            </v-row>
-        </v-col>
-    </v-row>
-
+    <v-container>
+        <v-row justify="center">
+            <v-col cols="6" md="2" v-for="n in categories" :key="n.item">
+                <v-img :src="require(`@/assets/imgs/${n.img}`)" width="90"></v-img>
+                 <div class="subheading pl-4">{{n.name}}</div> 
+            </v-col>
+            <!-- <v-col cols="6" md="2">
+                <v-img src="../../public/images/gadget.png" width="90"></v-img>
+            </v-col> -->
+        </v-row>
+    </v-container>
 </template>
 
 <script>
 export default {
     data(){
         return{
+            dir: '../../public/images/',
             categories: [
-                {'name': 'Phones', 'icon': 'fa fa-mobile', 'color': 'deep-orange', 'link': ''},
-                {'name': 'Electronics & Appliences', 'icon': 'fa fa-laptop', 'color': 'indigo', 'link': ''},
-                {'name': 'Cars', 'icon': 'fa fa-car', 'color': 'cyan', 'link': ''},
-                {'name': 'Bikes', 'icon': 'fa fa-motorcycle', 'color': 'blue', 'link': ''},
-                {'name': 'Funitures', 'icon': 'fa fa-wheelchair', 'color': 'red accent-3', 'link': ''},
-                {'name': 'Pets', 'icon': 'fa fa-paw', 'color': 'purple accent-3', 'link': ''},
-                {'name': 'Fashion', 'icon': 'fa fa-asterisk', 'color': 'pink', 'link': ''},
-                {'name': 'Kids', 'icon': 'fa fa-gamepad', 'color': 'deep-purple', 'link': ''},
-                {'name': 'services', 'icon': 'fa fa-shield', 'color': 'light-blue', 'link': ''},
-                {'name': 'Real Estate', 'icon': 'fa fa-home', 'color': 'green accent-3', 'link': ''},
+                {'name': 'Phones', 'img': 'smartphone.png', 'color': 'deep-orange', 'link': ''},
+                {'name': 'Electronics', 'img': 'gadget.png', 'color': 'indigo', 'link': ''},
+                {'name': 'Properties', 'img': 'house.png', 'color': 'indigo', 'link': ''},
+                {'name': 'Jobs', 'img': 'job.png', 'color': 'indigo', 'link': ''},
+                {'name': 'Funiture', 'img': 'sofa.png', 'color': 'indigo', 'link': ''},
+                {'name': 'Cars', 'img': 'car.png', 'color': 'indigo', 'link': ''},
+                {'name': 'Bikes', 'img': 'bike.png', 'color': 'indigo', 'link': ''},
+                {'name': 'Pet', 'img': 'pet.png', 'color': 'indigo', 'link': ''},
+                {'name': 'Fashion', 'img': 'dress.png', 'color': 'indigo', 'link': ''},
+
             ]
         }
     }

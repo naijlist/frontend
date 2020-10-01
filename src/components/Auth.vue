@@ -2,11 +2,11 @@
     <div class="grey lighten-2">
     <v-container >
         <v-card width="400" class="mx-auto mt-5 mb-5 fill-height" flat>
-            <v-progress-linear
+        <v-progress-linear
         :active="loading"
         :indeterminate="loading"
         absolute
-        color="teal"
+        color="teal lighten-1"
       />
         <v-card-title>
             <p class="pl-2 mb-0">Login here</p>        
@@ -96,11 +96,29 @@ export default {
             this.$refs.form.validate()
         },
         async login(){
-            this.loading = true
-           axios.post('http://localhost:5050/api/auth', {email: this.email, password: this.password})
-            .then((response) => {
-                console.log('satus code::::', response.status)
-            }).catch(err => console.log(err))
+                this.loading = true
+
+            setTimeout( () =>{
+            fetch('http://localhost:5050/api/auth', {
+                method: "POST",
+                body: JSON.stringify({email: this.email, password: this.password}),
+                headers: {"Content-type": "application/json; charset=UTF-8"}
+            }).then(response => {
+                if(response.status === 200){
+                    response.json().then(data => {
+                        this.$store.commit('setAuth', data)
+                        this.$router.push({name: 'home'})
+                    })
+                }
+                if(response.status === 401){
+                    this.loading = false
+                    this.snackbar = true
+                }
+            }).catch( err => {
+                this.loading = false
+                console.log(err)
+            })
+            }, 2000)
         }
     }
 }

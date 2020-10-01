@@ -30,28 +30,31 @@
         /> -->
 
       <v-spacer></v-spacer>
-         <v-btn text rounded to="user">
+         <v-btn text rounded to="user" v-if="!$store.getters.loggedIn">
         <span class="mr-2">Sign-up</span>
         <v-icon>mdi-account-plus-outline</v-icon>
       </v-btn>
-      <v-divider vertical></v-divider>
-         <v-btn text rounded to="auth">
+      <v-divider vertical v-if="!$store.getters.loggedIn"></v-divider>
+         <v-btn text rounded to="auth" v-if="!$store.getters.loggedIn">
         <span class="mr-2">Sign-in</span>
         <v-icon>mdi-account-outline</v-icon>
       </v-btn>
-      <v-divider vertical></v-divider>
       <v-btn text rounded>
         <span class="mr-2">Post Ads</span>
-        <v-icon>mdi-plus-circle-outline</v-icon>
+        <v-icon >mdi-plus-circle-outline</v-icon>
+      </v-btn>
+      <v-btn text rounded @click="logout" v-if="$store.getters.loggedIn">
+        <span class="mr-2">logout</span>
+        <v-icon color="red">mdi-power</v-icon>
       </v-btn>
     </v-app-bar>
 
-    <v-content class="hidden-sm-and-down">
+    <v-main class="hidden-sm-and-down">
       <router-view></router-view>
-    </v-content>
-    <v-content class="hidden-md-and-up" style="padding: 0px">
+    </v-main>
+    <v-main class="hidden-md-and-up" style="padding: 0px">
       <router-view></router-view>
-    </v-content>
+    </v-main>
   <v-bottom-navigation
     shift
     fixed
@@ -129,7 +132,9 @@ export default {
       ]
   }),
   methods:{
-    
+    logout(){
+      this.$store.commit('unsetAuth')
+    }
   }
 };
 </script>

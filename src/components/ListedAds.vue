@@ -4,7 +4,7 @@
             <v-col cols="12">
                 <v-row justify="start">
                     <v-col
-                        v-for="n in 2"
+                        v-for="n in 20"
                         :key="n"
                         cols="6"
                         xl="3"
@@ -16,15 +16,16 @@
                         <v-card
                             :loading="loading"
                             style="cursor:pointer;"
+                            flat
+                            tile
+                            max-width="280"
                         >
                         <v-img
-                        height="150px"
-                        max-height="150px"
                         src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+                        contain
                         ></v-img>
                       
                         <p class="pl-4 pt-2 mb-0">Cafe Badilico</p>
-
                         <v-card-text>
                         <!-- <v-row
                             align="center"
