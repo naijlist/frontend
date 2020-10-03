@@ -25,10 +25,27 @@ const routes = [
     component: () => import(/* webpackChunkName: "auth" */ '../views/Auth.vue')
   },
   {
-    path: '/user',
-    name: 'user',
+    path: '/sign-up',
+    name: 'sign-up',
 
     component: () => import( /* webpackChunkName: "user" */ '../views/User.vue')
+  },
+  {
+    path: '/main',
+    name: 'Main',
+    component: () => import('../views/Main.vue'),
+    children:[
+      {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: ()=> import('../components/user/Dashboard.vue')
+      },
+      {
+        path: '/profile',
+        name: '/profile',
+        component: () => import('../components/user/Profile.vue')
+      }
+    ]
   }
 ]
 

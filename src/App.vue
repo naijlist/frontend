@@ -43,10 +43,57 @@
         <span class="mr-2">Post Ads</span>
         <v-icon >mdi-plus-circle-outline</v-icon>
       </v-btn>
-      <v-btn text rounded @click="logout" v-if="$store.getters.loggedIn">
-        <span class="mr-2">logout</span>
-        <v-icon color="red">mdi-power</v-icon>
-      </v-btn>
+       <v-btn icon  v-if="$store.getters.loggedIn">
+        <v-icon>mdi-bell-outline</v-icon>
+       </v-btn>
+        <v-menu offset-y>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          v-bind="attrs"
+          v-on="on"
+          icon
+          v-if="$store.getters.loggedIn"
+        >
+        <v-icon  >mdi-account-outline</v-icon>
+        </v-btn>
+      </template>
+     <v-list rounded>
+      <v-list-item-group
+        color="primary"
+      >
+      
+        <v-list-item
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.page"
+        >
+        
+          <v-list-item-icon>
+            <v-icon v-text="item.icon"></v-icon>
+          </v-list-item-icon>
+          
+          <v-list-item-content>
+            
+            <v-list-item-title v-text="item.title"></v-list-item-title>
+            
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider></v-divider>
+        <v-list-item>
+        
+          <v-list-item-icon>
+            <v-icon color="red">mdi-power</v-icon>
+          </v-list-item-icon>
+          
+          <v-list-item-content>
+            
+            <v-list-item-title>Logout</v-list-item-title>
+            
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-item-group>
+    </v-list>
+    </v-menu>
     </v-app-bar>
 
     <v-main class="hidden-sm-and-down">
@@ -77,7 +124,7 @@
       <v-icon>mdi-account-outline</v-icon>
     </v-btn>
   </v-bottom-navigation>
-    <v-footer
+    <!-- <v-footer
     dark
     padless
     class="hidden-sm-and-down"
@@ -108,7 +155,7 @@
         {{ new Date().getFullYear() }} — <strong>Name Can't be blank</strong>
       </v-card-text>
     </v-card>
-  </v-footer>
+  </v-footer> -->
   </v-app>
 </template>
 
@@ -123,6 +170,10 @@ export default {
   },
 
   data: () => ({
+     items: [
+        { title: 'Dashboard', icon: 'mdi-apps', page: 'dashboard' },
+        { title: 'Profile', icon: 'mdi-account-circle-outline', page: 'profile' },
+      ],
     icons: [
         'fab fa-facebook',
         'fab fa-twitter',

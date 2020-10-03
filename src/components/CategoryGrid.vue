@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-row justify="center">
+        <v-row justify="center" >
             <v-col cols="6" md="2" v-for="n in categories" :key="n.item">
                 <v-img :src="require(`@/assets/imgs/${n.img}`)" width="90"></v-img>
                  <div class="subheading pl-4">{{n.name}}</div> 

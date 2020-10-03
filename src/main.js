@@ -3,9 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
-
+import theme from './plugins/theme'
 // Components
-import 'components'
+import './components'
 
 // Plugins
 import './plugins'

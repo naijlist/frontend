@@ -195,13 +195,13 @@
       >
         <material-card
           class="card-tabs"
-          color="info">
+          color="general">
           <v-flex
             slot="header"
           >
             <v-tabs
               v-model="tabs"
-              color="info"
+              color="transparent"
               slider-color="white"
             >
               <span
