@@ -98,8 +98,9 @@
   </v-container>
   <v-container fluid>
 <v-sheet
-    class="mx-auto"
+    class="mx-auto hidden-sm-and-down"
     elevation="0"
+    
   >
     <v-subheader class="ml-10">1K DEALS</v-subheader>
 
@@ -115,7 +116,7 @@
         v-slot:default="{ active, toggle }"
       >
         <v-card
-          height="130"
+          height="140"
           width="180"
           @click="toggle"
           flat
@@ -127,6 +128,45 @@
           >
             <v-scale-transition>
               <v-img src="https://cdn.vuetifyjs.com/images/cards/cooking.png" width="120" height="120" contain/>
+            </v-scale-transition>
+            
+          </v-row>
+              <v-card-subtitle>ALLLLLL</v-card-subtitle>
+
+        </v-card>
+      </v-slide-item>
+    </v-slide-group>
+  </v-sheet>
+
+  <v-sheet
+    class="mx-auto hidden-md-and-up"
+    elevation="0"
+  >
+    <v-subheader class="ml-10">1K DEALS</v-subheader>
+
+    <v-slide-group
+      v-model="model"
+      active-class="teal lighten-4"
+      show-arrows
+    >
+      <v-slide-item
+        v-for="n in 15"
+        :key="n"
+        v-slot:default="{ active, toggle }"
+      >
+        <v-card
+          height="80"
+          width="100"
+          @click="toggle"
+          flat
+        >
+          <v-row
+            class="fill-height"
+            align="center"
+            justify="center"
+          >
+            <v-scale-transition>
+              <v-img src="https://cdn.vuetifyjs.com/images/cards/cooking.png" max-width="90" max-height="150" contain/>
             </v-scale-transition>
             
           </v-row>
