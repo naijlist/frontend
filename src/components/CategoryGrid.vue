@@ -1,9 +1,17 @@
 <template>
     <v-container>
-        <v-row justify="center" >
-            <v-col cols="6" md="2" v-for="n in categories" :key="n.item">
-                <v-img :src="require(`@/assets/imgs/${n.img}`)" width="90"></v-img>
-                 <div class="subheading pl-4">{{n.name}}</div> 
+        <v-row justify="center">
+                <v-col cols="4" md="2" sm="3" xs="4" v-for="n in categories" :key="n.item">
+                <center>
+                    <v-hover v-slot:default="{ hover }">
+                    <v-card flat tile class="pa-2" 
+                    :elevation="hover ? 12 : 0"
+                    :class="{ 'on-hover': hover }">
+                    <v-img :src="require(`@/assets/imgs/${n.img}`)" width="90"/>
+                    <div class="subtitle pt-2" >{{n.name}}</div>
+                    </v-card>
+                    </v-hover>
+                </center>
             </v-col>
             <!-- <v-col cols="6" md="2">
                 <v-img src="../../public/images/gadget.png" width="90"></v-img>
@@ -17,6 +25,7 @@ export default {
     data(){
         return{
             dir: '../../public/images/',
+            ransparent: 'rgba(255, 255, 255, 0)',
             categories: [
                 {'name': 'Phones', 'img': 'smartphone.png', 'color': 'deep-orange', 'link': ''},
                 {'name': 'Electronics', 'img': 'gadget.png', 'color': 'indigo', 'link': ''},
@@ -34,7 +43,7 @@ export default {
 }
 </script>
 <style scoped>
-    .focus-layout{
+    /* .focus-layout{
         margin: 5px;
         padding: 20px 0;
         transition: 0.5s all;
@@ -101,5 +110,15 @@ export default {
 }
 .focus-layout:hover h4.clrchg {
     color: #fff;
+} */
+.v-card {
+  transition: opacity .5s ease-in-out;
+  cursor: pointer;
+
 }
+
+.v-card:not(.on-hover) {
+  /* opacity: 0.6; */
+  background: transparent;
+ }
 </style>

@@ -7,6 +7,7 @@
       fixed
       class="hidden-sm-and-down"
       dense
+      flat
     >
     <router-link to="/">
         <v-toolbar-title style="cursor: pointer;" dark><v-img src="../public/main.png" /> </v-toolbar-title>
@@ -57,7 +58,7 @@
         <v-icon  >mdi-account-outline</v-icon>
         </v-btn>
       </template>
-     <v-list rounded>
+     <v-list>
       <v-list-item-group
         color="primary"
       >
@@ -95,7 +96,6 @@
     </v-list>
     </v-menu>
     </v-app-bar>
-
     <v-main class="hidden-sm-and-down">
       <router-view></router-view>
     </v-main>

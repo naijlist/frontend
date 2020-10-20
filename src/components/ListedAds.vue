@@ -1,7 +1,8 @@
 <template>
-    <v-container>
+    <v-container fluid>
         <v-row>
             <v-col cols="12">
+                <v-subheader>Recently Added</v-subheader>
                 <v-row justify="start">
                     <v-col
                         v-for="n in 20"
@@ -13,12 +14,15 @@
                         sm="6"
                         xs="6"
                     >
-                        <v-card
+                       <v-hover v-slot:default="{ hover }">
+                            <v-card
                             :loading="loading"
                             style="cursor:pointer;"
                             flat
                             tile
                             max-width="280"
+                            :elevation="hover ? 12 : 0"
+                            :class="{ 'on-hover': hover }"
                         >
                         <v-img
                         src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
@@ -50,6 +54,7 @@
                         <div>Small plates, salads & sandwiches....</div>
                         </v-card-text>
                     </v-card>
+                       </v-hover>
                     </v-col>
                 </v-row>
             </v-col>
@@ -60,8 +65,9 @@
 <script>
   export default {
     data: () => ({
-      loading: false,
-      selection: 1,
+        ransparent: 'rgba(255, 255, 255, 0)',
+        loading: false,
+        selection: 1,
     }),
 
     methods: {
@@ -74,5 +80,13 @@
   }
 </script>
 <style scoped>
+.v-card {
+  transition: opacity .5s ease-in-out;
+  cursor: pointer;
 
+}
+
+.v-card:not(.on-hover) {
+  /* opacity: 0.6; */
+ }
 </style>
