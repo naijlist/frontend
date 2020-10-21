@@ -25,6 +25,9 @@ export default new Vuex.Store({
     unsetAuth(state, payload){
       state.loggedIn = false
       state.userData = {}
+    },
+    unsetState(state, payload){
+      state = new Object({})
     }
   },
   actions:{},

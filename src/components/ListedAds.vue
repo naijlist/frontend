@@ -17,7 +17,6 @@
                        <v-hover v-slot:default="{ hover }">
                             <v-card
                             :loading="loading"
-                            style="cursor:pointer;"
                             flat
                             tile
                             max-width="280"
@@ -52,7 +51,10 @@
                         </div>
 
                         <div>Small plates, salads & sandwiches....</div>
+                          <v-btn outlined text block color="success" :to="`ads-viewer/${n}`">view</v-btn>
                         </v-card-text>
+                        <v-card-actions>
+                        </v-card-actions>
                     </v-card>
                        </v-hover>
                     </v-col>
@@ -76,13 +78,15 @@
 
         setTimeout(() => (this.loading = false), 2000)
       },
+      navigateTo(route){
+        this.$router.push({name: route})
+      }
     },
   }
 </script>
 <style scoped>
 .v-card {
   transition: opacity .5s ease-in-out;
-  cursor: pointer;
 
 }
 

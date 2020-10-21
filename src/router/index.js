@@ -31,6 +31,12 @@ const routes = [
     component: () => import( /* webpackChunkName: "user" */ '../views/User.vue')
   },
   {
+    path: '/ads-viewer/:id',
+    name: 'ads-view',
+
+    component: () => import( /* webpackChunkName: "user" */ '../components/Adsview.vue')
+  },
+  {
     path: '/main',
     name: 'Main',
     component: () => import('../views/Main.vue'),
