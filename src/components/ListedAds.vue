@@ -20,16 +20,17 @@
                             flat
                             tile
                             max-width="280"
+                            max-height="330"
                             :elevation="hover ? 12 : 0"
                             :class="{ 'on-hover': hover }"
                         >
                         <v-img
                         src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-                        contain
-                        ></v-img>
+                        contain max-width="270"/>
                       
-                        <p class="pl-4 pt-2 mb-0">Cafe Badilico</p>
                         <v-card-text>
+                        <div class="overline">Cafe Badilico</div>
+
                         <!-- <v-row
                             align="center"
                             class="mx-0"
@@ -46,8 +47,8 @@
                             <div class="grey--text ml-4">4.5 (413)</div>
                         </v-row> -->
 
-                        <div class="subtitle-2">
-                            NGN 20,000
+                        <div class="subtitle">
+                            <b>NGN 20,000</b>
                         </div>
 
                         <div>Small plates, salads & sandwiches....</div>

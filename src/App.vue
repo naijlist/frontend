@@ -103,8 +103,8 @@
       <router-view></router-view>
     </v-main>
   <v-bottom-navigation
-    shift
     fixed
+    :value="1"
     color="teal"
     grow
     class="hidden-md-and-up"
