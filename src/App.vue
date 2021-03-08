@@ -31,7 +31,7 @@
         /> -->
 
       <v-spacer></v-spacer>
-         <v-btn text rounded to="user" v-if="!$store.getters.loggedIn">
+         <v-btn text rounded to="sign-up" v-if="!$store.getters.loggedIn">
         <span class="mr-2">Sign-up</span>
         <v-icon>mdi-account-plus-outline</v-icon>
       </v-btn>
@@ -40,7 +40,7 @@
         <span class="mr-2">Sign-in</span>
         <v-icon>mdi-account-outline</v-icon>
       </v-btn>
-      <v-btn text rounded>
+      <v-btn text rounded to="/dashboard">
         <span class="mr-2">Post Ads</span>
         <v-icon >mdi-plus-circle-outline</v-icon>
       </v-btn>
@@ -48,7 +48,7 @@
         <v-icon>mdi-bell-outline</v-icon>
        </v-btn>
         <v-menu offset-y>
-      <template v-slot:activator="{ on, attrs }">
+      <template v-slot:activator="{ on, attrs }" v-if="$store.getters.loggedIn">
         <v-btn
           v-bind="attrs"
           v-on="on"
@@ -80,7 +80,7 @@
           </v-list-item-content>
         </v-list-item>
         <v-divider></v-divider>
-        <v-list-item>
+        <v-list-item @click="logout">
         
           <v-list-item-icon>
             <v-icon color="red">mdi-power</v-icon>
@@ -184,7 +184,8 @@ export default {
   }),
   methods:{
     logout(){
-      this.$store.commit('unsetAuth')
+      this.$store.commit('unsetAuth', {})
+      this.$router.push('/')
     }
   }
 };

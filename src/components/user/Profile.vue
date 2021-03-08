@@ -21,15 +21,7 @@
               <v-layout wrap>
                 <v-flex
                   xs12
-                  md4
-                >
-                  <v-text-field
-                    label="Company (disabled)"
-                    disabled/>
-                </v-flex>
-                <v-flex
-                  xs12
-                  md4
+                  md6
                 >
                   <v-text-field
                     class="purple-input"
@@ -38,7 +30,7 @@
                 </v-flex>
                 <v-flex
                   xs12
-                  md4
+                  md6
                 >
                   <v-text-field
                     label="Email Address"
@@ -70,25 +62,17 @@
                 </v-flex>
                 <v-flex
                   xs12
-                  md4>
+                  md6>
                   <v-text-field
                     label="City"
                     class="purple-input"/>
                 </v-flex>
                 <v-flex
                   xs12
-                  md4>
+                  md6>
                   <v-text-field
-                    label="Country"
+                    label="Town"
                     class="purple-input"/>
-                </v-flex>
-                <v-flex
-                  xs12
-                  md4>
-                  <v-text-field
-                    class="purple-input"
-                    label="Postal Code"
-                    type="number"/>
                 </v-flex>
                 <v-flex xs12>
                   <v-textarea
@@ -134,11 +118,6 @@
             i just told everyone in my family about it, everybody thinks that's very impressive and asked me to congratulate you.
             they want to speak to you in person, if possible, to give you their regards.
             they also said they will tell our distant relatives in christmas supper and in NYE they will ignite fireworks that spell your name.</p>
-            <v-btn
-              color="general"
-              round
-              class="font-weight-light"
-            >Follow</v-btn>
           </v-card-text>
         </material-card>
       </v-flex>

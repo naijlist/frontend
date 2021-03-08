@@ -51,6 +51,7 @@
       <v-toolbar-title
         style="width: 300px"
         class="ml-0 pl-4"
+        @click="navigateTo()"
       >
         <span class="hidden-sm-and-down">NAIJLIST</span>
       </v-toolbar-title>
@@ -125,10 +126,13 @@ export default {
       }
     },
     methods:{
+      navigateTo(){
+        this.$router.push('/')
+      },
        logout() {
-      this.$store.dispatch('logout').then(() => {
-        this.$router.push('/auth')
-      })
+
+      this.$store.commit('unsetAuth', {})
+        this.$router.push('/')
     }
     },
     created(){

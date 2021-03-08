@@ -2,7 +2,7 @@
     <v-container fluid>
         <v-row>
             <v-col cols="12">
-                <v-subheader>Recently Added</v-subheader>
+                <v-subheader>ANYTHING FOR LESS</v-subheader>
                 <v-row justify="start">
                     <v-col
                         v-for="n in 20"

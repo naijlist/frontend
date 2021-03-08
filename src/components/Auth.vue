@@ -1,5 +1,5 @@
 <template>
-    <div class="grey lighten-2">
+    <div class="grey lighten-2 mt-10">
     <v-container >
         <v-card width="400" class="mx-auto mt-5 mb-5 fill-height" flat>
         <v-progress-linear
@@ -42,7 +42,7 @@
                 />
                 <v-divider></v-divider>
                 <v-card-actions>
-                    <v-btn color="success" dark rounded to="user" outlined >Sign up</v-btn>
+                    <v-btn color="success" dark rounded to="sign-up" outlined >Sign up</v-btn>
                     
                         <v-spacer></v-spacer>
                         <v-btn 
@@ -107,15 +107,18 @@ export default {
                 if(response.status === 200){
                     response.json().then(data => {
                         this.$store.commit('setAuth', data)
-                        this.$router.push({name: 'home'})
+                        window.location = 'http://localhost:8080'
                     })
                 }
                 if(response.status === 401){
                     this.loading = false
+                    this.errorMessages = "Invalid email or password!"
                     this.snackbar = true
                 }
             }).catch( err => {
                 this.loading = false
+                this.errorMessages = "Network Error try again later"
+                this.snackbar = true
                 console.log(err)
             })
             }, 2000)

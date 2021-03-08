@@ -1,6 +1,6 @@
 <template>
 <div>
-  <v-card class="mx-auto hidden-sm-and-down"  flat tile>
+  <v-card class="mx-auto hidden-sm-and-down card-bg"   flat tile>
     <v-card-text>
       <v-row>
       <v-col cols="12" >
@@ -118,7 +118,7 @@
         <v-card
           height="140"
           width="180"
-          @click="toggle"
+          @click="toggle(), navigate(n)"
           flat
         >
           <v-row
@@ -131,8 +131,6 @@
             </v-scale-transition>
             
           </v-row>
-              <v-card-subtitle>ALLLLLL</v-card-subtitle>
-
         </v-card>
       </v-slide-item>
     </v-slide-group>
@@ -170,8 +168,6 @@
             </v-scale-transition>
             
           </v-row>
-              <v-card-subtitle>ALLLLLL</v-card-subtitle>
-
         </v-card>
       </v-slide-item>
     </v-slide-group>
@@ -200,6 +196,10 @@ export default {
   methods:{
     search(){
       console.log('clicked');
+    },
+    navigate(route){
+      console.log(route)
+      this.$router.push({path: `ads-viewer/${route}`})
     }
   }
 };
@@ -214,5 +214,10 @@ export default {
   .indexForm{
     margin-top: 270px;
     margin-left: 250px;
+  }
+  .card-bg{
+    background-color:palegreen;
+    background-image: url('../assets/bg.jpg');
+    background-size: cover;
   }
 </style>

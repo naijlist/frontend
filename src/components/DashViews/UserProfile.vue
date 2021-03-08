@@ -24,14 +24,6 @@
                   md4
                 >
                   <v-text-field
-                    label="Company (disabled)"
-                    disabled/>
-                </v-flex>
-                <v-flex
-                  xs12
-                  md4
-                >
-                  <v-text-field
                     class="purple-input"
                     label="User Name"
                   />
