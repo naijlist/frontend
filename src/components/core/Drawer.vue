@@ -12,8 +12,8 @@
             </v-list-item-avatar>
 
             <v-list-item-content>
-              <v-list-item-title>salscodes</v-list-item-title>
-              <v-list-item-subtitle>salscodes@gmail.com</v-list-item-subtitle>
+              <v-list-item-title>{{$store.getters.userData.fullname}}</v-list-item-title>
+              <v-list-item-subtitle>{{$store.getters.userData.email}}</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
 
@@ -110,7 +110,6 @@ export default {
     },
     computed:{
       items(){
-        if(this.$store.state.userInfo.role === 'admin') {
           return [
                 { icon: 'mdi-apps', text: 'Dashboard', page: 'dashboard'},
                 { icon: 'mdi-table-account', text: 'Users', page: 'users-table'},
@@ -118,11 +117,7 @@ export default {
                 { icon: 'mdi-account-multiple', text: 'Consultants', page: 'consultants' },
                 { icon: 'mdi-table-multiple', text: 'Projects', page: "projects" }, 
               ]
-        } else if(this.$store.state.userInfo.role === 'super') {
-          return [
-            { icon: 'mdi-office-building', text: 'Companies', page: 'companies' }
-          ]
-        }
+        
       }
     },
     methods:{
@@ -137,7 +132,8 @@ export default {
     },
     created(){
     console.log('dash')
-        if(!this.$store.state.userLoggedIn) return this.$router.push({name: 'Login'})
+        if(!this.$store.getters.loggedIn) return this.$router.push({name: 'auth'})
+        console.log(this.$store.getters.userData);
     }
 }
 </script>

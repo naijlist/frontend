@@ -107,7 +107,7 @@ export default {
                 if(response.status === 200){
                     response.json().then(data => {
                         this.$store.commit('setAuth', data)
-                        window.location = 'http://localhost:8080'
+                        this.$router.push('/')
                     })
                 }
                 if(response.status === 401){
