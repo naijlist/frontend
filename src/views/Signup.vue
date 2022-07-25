@@ -1,0 +1,254 @@
+<template>
+<div class="relative min-h-screen flex ">
+    <div class="fixed z-10 sm:px-10 sm:py-5  sm:text-black text-black">
+        <router-link to="/">
+            <h3 class="text-white font-bold text-2xl" >Naijlist</h3>
+        </router-link>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
+      <div class="sm:w-1/2 xl:w-3/5 h-full hidden md:flex flex-auto items-end justify-end p-10 pr-20 overflow-hidden bg-purple-900 text-white bg-no-repeat bg-cover relative"
+        style="background-image: url(https://images.unsplash.com/photo-1472841298542-80b08039a5ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
+        <div class="absolute bg-gradient-to-b from-secondary to-primary opacity-75 inset-0 z-0"></div>
+        <div class="w-full  max-w-lg z-10 mb-20">
+          <div class="sm:text-4xl xl:text-5xl font-bold leading-tight mb-6">Google of classified ads.....</div>
+          <div class="sm:text-sm xl:text-md text-gray-100 font-normal"> What is Lorem Ipsum Lorem Ipsum is simply dummy
+            text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever
+            since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it
+            has?</div>
+        </div>
+        <!---remove custom style-->
+       <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+   </ul>
+      </div>
+      <div class="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full w-2/5 xl:w-2/5 p-8  md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
+        <div class="max-w-md w-full ">
+				<div class="mb-10">
+					<h3 class="font-semibold text-2xl text-gray-800">Create account </h3>
+					<p class="text-gray-500">Enter a few details to create your account.</p>
+				</div>
+				<div class="flex">
+					<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+						<button type="submit" class="w-full flex items-center justify-center bg-red-500  hover:bg-red-400 text-gray-100 p-3  rounded-md tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
+                Sign up with 
+                <svg class="w-4 ml-2" fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 13.9v-3.72h9.36c.14.63.25 1.22.25 2.05 0 5.71-3.83 9.77-9.6 9.77-5.52 0-10-4.48-10-10S6.48 2 12 2c2.7 0 4.96.99 6.69 2.61l-2.84 2.76c-.72-.68-1.98-1.48-3.85-1.48-3.31 0-6.01 2.75-6.01 6.12s2.7 6.12 6.01 6.12c3.83 0 5.24-2.65 5.5-4.22h-5.51v-.01Z"/></svg>
+              </button>
+					</div>
+					<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+						<button type="submit" class="w-full flex items-center justify-center bg-blue-600  hover:bg-blue-500 text-gray-100 p-3  rounded-md tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
+                Sign up with 
+                <svg class="w-4 ml-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" fill-rule="evenodd" d="M9.945 22v-8.834H7V9.485h2.945V6.54c0-3.043 1.926-4.54 4.64-4.54 1.3 0 2.418.097 2.744.14v3.18h-1.883c-1.476 0-1.82.703-1.82 1.732v2.433h3.68l-.736 3.68h-2.944L13.685 22"/></svg>
+              </button>
+					</div>
+				</div>
+				<div class="flex items-center justify-center space-x-2 my-5">
+					<span class="h-px w-16 bg-gray-200"></span>
+					<span class="text-gray-300 font-normal">or continue with</span>
+					<span class="h-px w-16 bg-gray-200"></span>
+				</div>
+				<form class="w-full max-w-lg" @submit="userSignup">
+					<div class="flex flex-wrap -mx-3 mb-2">
+						<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+							<label class="block  tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                                First Name
+                            </label>
+							<input class="appearance-none block w-full bg-gray-100 text-gray-700 rounded py-3 px-4 mb-3 border border-gray-200 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="grid-first-name" type="text" placeholder="John">
+						</div>
+						<div class="w-full md:w-1/2 px-3">
+							<label class="block  tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                                Last Name
+                            </label>
+							<input class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="grid-last-name" type="text" placeholder="Doe">
+                        </div>
+						</div>
+                        <div class="flex flex-wrap -mx-3 mb-2">
+							<div class="w-full px-3">
+								<label class="block  tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                                    Email
+                                </label>
+								<input class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="grid-password" type="email" placeholder="johndoe@example.com">
+								
+							</div>
+						</div>
+                        
+						<div class="flex flex-wrap -mx-3 mb-2">
+							<div class="w-full px-3">
+								<label class="block  tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                                    Password
+                                </label>
+								<input class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="grid-password" type="password" placeholder="******************">
+								
+							</div>
+						</div>
+						
+								<div class="space-y-6 mt-2">
+					<div class="flex items-center justify-between">
+						<div class="flex items-center">
+							<input id="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 bg-blue-500 focus:ring-blue-400 border-gray-300 rounded">
+							<label for="remember_me" class="ml-2 block text-sm text-gray-800">
+                  Remember me
+                </label>
+						</div>
+						<div class="text-sm">
+							
+								Forgot your password?<a href="#" class="text-blue-400 hover:text-blue-400"> Reset it</a>
+						</div>
+					</div>
+					<div>
+						<button type="submit" class="w-full flex justify-center bg-primary  hover:bg-pink-500 text-white p-3  rounded-md tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
+                            Sign in
+                        </button>
+					</div>
+                    <p className="mt-3 mb-4 text-center text-sm ">
+                    Already have an account?
+                    <router-link to="/auth">
+                        <a class="text-blue-400">Login</a>
+                    </router-link>
+                    </p>
+				</div>
+				</form>
+				
+				<!-- <div class="pt-6 text-center text-gray-400 text-xs">
+					<span>
+                Copyright © 2021-2022
+                <a href="https://codepen.io/uidesignhub" rel="" target="_blank" title="Ajimon" class="text-pink-300 hover:text-pink-400 ">AJI</a></span>
+				</div> -->
+			
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+    setup () {
+        function userSignup(e) {
+            e.preventDefault();
+            console.log('Signing up....')
+        }
+
+        return { userSignup }
+    }
+}
+</script>
+
+<style scoped>
+      .circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+  .circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #5534A5;
+    animation: animate 25s linear infinite;
+    bottom: -150px;  
+}
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+ 
+ 
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+ 
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+ 
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+ 
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+ 
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+ 
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+ 
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+ 
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+ 
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+  @keyframes animate {
+ 
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+ 
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+ 
+}
+</style>
