@@ -1,9 +1,5 @@
 <template>
- <!-- component -->
 <div class="flex flex-col w-11/12 py-5 text-white  container mt-10 mx-auto  m-auto p-auto">
-<!-- <h1 class="flex py-5 lg:px-20 md:px-10 px-5 lg:mx-40 md:mx-20 mx-5 font-bold text-4xl text-gray-800">
-  Example
-</h1> -->
       <div class="flex overflow-x-scroll  hide-scroll-bar">
         <div class="flex flex-nowrap lg:ml-20 md:ml-20 ml-10 ">
           <div v-for="(item, index) in items" :key="index" class="inline-block px-3">
@@ -26,25 +22,6 @@ export default {
   },
   data() {
     return {
-      options: {
-        responsive: [
-          { end: 576, size: 1 },
-          { start: 576, end: 768, size: 2 },
-          { start: 768, end: 992, size: 3 },
-          { size: 5 },
-        ],
-        autoscroll: {
-          enabled: false,
-          interval: 5000, // in milliseconds
-          repeat: false, // used to tell if after reaching the end of the list should the list return to beginning again
-        },
-        list: {
-          // 1200 because @media (min-width: 1200px) and therefore I want to switch to windowed mode
-          windowed: 1200,
-          // Because: #app {padding: 80px 24px;}
-          padding: 24,
-        },
-      },
       items: [
         {title: 'phones', icon: 'phone.png'},
         {title: 'laptops', icon: 'laptop.png'},
