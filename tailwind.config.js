@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     colors:{
       primary: '#5534A5',
+      primaryDark: '#3f1c92',
       white: '#fff',
       black: colors.black,
       secondary: '#A85CF9',
@@ -21,5 +22,7 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }

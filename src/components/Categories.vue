@@ -7,7 +7,7 @@
       <div class="flex overflow-x-scroll  hide-scroll-bar">
         <div class="flex flex-nowrap lg:ml-20 md:ml-20 ml-10 ">
           <div v-for="(item, index) in items" :key="index" class="inline-block px-3">
-            <div class="w-20 h-20 max-w-xs overflow-hidden px-2 py-2 rounded-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+            <div class="w-20 h-20 max-w-xs overflow-hidden px-2 py-2 rounded-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
               <img :src="require(`../assets/icons/${item.icon}`)"  :alt="item.title"/>
             </div>
             <div class="w-20  mt-2">

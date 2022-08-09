@@ -2,8 +2,18 @@
 
 * {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    letter-spacing: 0.5px
+    letter-spacing: 0.5px;
 }
+html {
+    scrollbar-width: none;
+  }
+body {
+    background-color:rgb(236, 241, 236);
+    -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
 
 @tailwind base;
 
@@ -16,5 +26,3 @@
         @apply rounded-md;
     }
 }
-
-
