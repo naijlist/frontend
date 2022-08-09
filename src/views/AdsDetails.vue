@@ -2,7 +2,7 @@
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3  gap-5 mx-8 lg:mx-20 mt-28 mb-7">
         <div class="col-span-2 rounded-md">
             <img src="../assets/imgs/lenovot450.jpg"  alt="ads-img" class="w-full rounded-md mb-5">
-        <div class=" col-span-2 rounded-md bg-white px-5 py-5">Specification</div>
+        <div class=" col-span-2 rounded-md bg-white px-5 py-5"> ads details Specification</div>
 
         </div>
         <div class="col-span-2 md:col-span-1 flex-col">
@@ -44,7 +44,7 @@
                 <img src="../assets/map.png" alt="">
             </div>
 
-        <div class="col-span-2 md:col-span-1 px-5 py-5 bg-white">NOTE</div>
+        <div class="col-span-2 md:col-span-1 px-5 py-5 bg-white">NOTE: warning about naijlist</div>
             
         </div>
         
