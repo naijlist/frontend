@@ -1,8 +1,9 @@
 <template>
 <div class="relative min-h-screen flex ">
     <div class="fixed z-10 sm:px-10 sm:py-5  sm:text-black text-black">
-        <router-link to="/">
-            <h3 class="text-white font-bold text-2xl" >Naijlist</h3>
+        <router-link to="/" class="flex gap-2 items-center">
+            <img src="../assets/list.png" alt="logo" class="w-8">
+            <h3 class="text-white font-semibold text-2xl" >Naijlist</h3>
         </router-link>
     </div>
     <div class="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
