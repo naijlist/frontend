@@ -2,7 +2,17 @@
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3  gap-5 mx-8 lg:mx-20 mt-28 mb-7">
         <div class="col-span-2 rounded-md">
             <img src="../assets/imgs/lenovot450.jpg"  alt="ads-img" class="w-full rounded-md mb-5">
-        <div class=" col-span-2 rounded-md bg-white px-5 py-5"> ads details Specification</div>
+        <div class=" col-span-2 rounded-md bg-white px-5 py-5"> 
+            <p class="text-3xl font-bold">Lenovo thinkPad 8GB RAM and 1TB HDD</p>
+            <div>
+                <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgb(0, 0, 0); user-select: auto;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" style="user-select: auto;"></path><path d="M13 7h-2v6h6v-2h-4z" style="user-select: auto;"></path></svg>
+                </p>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgb(0, 0, 0); user-select: auto;"><path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z" style="user-select: auto;"></path><path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z" style="user-select: auto;"></path></svg>
+                </p>
+            </div>
+        </div>
 
         </div>
         <div class="col-span-2 md:col-span-1 flex-col">

@@ -15,13 +15,10 @@
                     </router-link>
                     <!--Image end-->
                     <div class="flex justify-between -mt-4 px-2 ">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 p-1 rounded-full bg-white text-red hover:bg-gray-300 duration-500 transition ease-in " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 p-1 bg-white rounded-full hover:bg-gray-300 duration-500 transition ease-in " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                        </svg>
+                       
+                       
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 p-1 rounded-full bg-white text-red hover:bg-gray-300 duration-500 transition ease-in " style="fill: rgb(0, 0, 0); user-select: auto;"><path d="M12 4.595a5.904 5.904 0 0 0-3.996-1.558 5.942 5.942 0 0 0-4.213 1.758c-2.353 2.363-2.352 6.059.002 8.412l7.332 7.332c.17.299.498.492.875.492a.99.99 0 0 0 .792-.409l7.415-7.415c2.354-2.354 2.354-6.049-.002-8.416a5.938 5.938 0 0 0-4.209-1.754A5.906 5.906 0 0 0 12 4.595zm6.791 1.61c1.563 1.571 1.564 4.025.002 5.588L12 18.586l-6.793-6.793c-1.562-1.563-1.561-4.017-.002-5.584.76-.756 1.754-1.172 2.799-1.172s2.035.416 2.789 1.17l.5.5a.999.999 0 0 0 1.414 0l.5-.5c1.512-1.509 4.074-1.505 5.584-.002z" style="user-select: auto;"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 p-1 rounded-full bg-white text-red hover:bg-gray-300 duration-500 transition ease-in " style="fill: rgb(0, 0, 0); user-select: auto;"><path d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2zm0 16.553-6-3.428-6 3.428V4h12v14.553z" style="user-select: auto;"></path></svg>
                     </div>
                    <div class="flex justify-between items-center">
                     <router-link :to="`/ads-details/${index}`">
