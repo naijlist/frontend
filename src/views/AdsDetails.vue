@@ -1,10 +1,10 @@
 <template>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3  gap-5 mx-8 lg:mx-20 mt-28 mb-7">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3  gap-5 px-4 lg:px-16 pt-24 mb-7">
         <div class="col-span-2 rounded-md">
             <img src="../assets/imgs/lenovot450.jpg"  alt="ads-img" class="w-full rounded-md mb-5">
         <div class=" col-span-2 rounded-md bg-white px-5 py-5"> 
-            <p class="text-md sm:text-3xl font-bold px-5">Lenovo thinkPad 8GB RAM and 1TB HDD</p>
-            <div class="px-3 sm:px-5 py-5 flex gap-5 sm:gap-10">
+            <p class="text-md sm:text-3xl font-bold md:px-5">Lenovo thinkPad 8GB RAM and 1TB HDD</p>
+            <div class="md:px-3 py-5 flex gap-5 sm:gap-10">
                 <p class="flex gap-2 justify-center items-center text-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgb(0, 0, 0); user-select: auto;">
                     <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" style="user-select: auto;"></path><path d="M13 7h-2v6h6v-2h-4z" style="user-select: auto;"></path>
@@ -30,41 +30,41 @@
             <div class="px-5 py-5">
                 <h3 class="text-2xl  mb-4">Specification</h3>
                 <div class="flex  py-5 gap-5 sm:gap-10">
-                <p class="flex gap-2 justify-center items-cente text-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" style="fill: rgb(0, 0, 0); user-select: auto;">
-                        <path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm11-6h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 6h-4V5h4v4zm-9 4H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm-1 6H5v-4h4v4zm8-6c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z" style="user-select: auto;"></path>
-                    </svg>
-                    <span class="text-xs"><b>Category:</b> Electronics</span>
-                </p>
+                        <p class="flex gap-2 justify-center items-center text-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" style="fill: rgb(0, 0, 0); user-select: auto;">
+                                <path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm11-6h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 6h-4V5h4v4zm-9 4H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm-1 6H5v-4h4v4zm8-6c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z" style="user-select: auto;"></path>
+                            </svg>
+                            <span class="text-xs"><b>Category:</b> Electronics</span>
+                        </p>
 
-                <p class="flex gap-2 justify-center items-cente text-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" style="fill: rgb(0, 0, 0); user-select: auto;">
-                        <path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm11-6h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 6h-4V5h4v4zm-9 4H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm-1 6H5v-4h4v4zm8-6c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z" style="user-select: auto;"></path>
-                    </svg>
-                    <span class="text-xs"><b>Condition:</b> Used</span>
-                </p>
+                        <p class="flex gap-2 justify-center items-center text-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" style="fill: rgb(0, 0, 0); user-select: auto;">
+                                <path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm11-6h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 6h-4V5h4v4zm-9 4H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm-1 6H5v-4h4v4zm8-6c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z" style="user-select: auto;"></path>
+                            </svg>
+                            <span class="text-xs"><b>Condition:</b> Used</span>
+                        </p>
 
-                 <p class="flex gap-2 justify-center items-cente text-gray-700">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" style="fill: rgb(0, 0, 0); transform: rotate(90deg); user-select: auto;">
-                    <path d="M11.707 2.293A.997.997 0 0 0 11 2H6a.997.997 0 0 0-.707.293l-3 3A.996.996 0 0 0 2 6v5c0 .266.105.52.293.707l10 10a.997.997 0 0 0 1.414 0l8-8a.999.999 0 0 0 0-1.414l-10-10zM13 19.586l-9-9V6.414L6.414 4h4.172l9 9L13 19.586z" style="user-select: auto;"></path><circle cx="8.353" cy="8.353" r="1.647" style="user-select: auto;"></circle>
-                   </svg>
-                   <span class="text-xs"> <b>Brand:</b> Lenovo</span>
-                </p>
+                        <p class="flex gap-2 justify-center items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" style="fill: rgb(0, 0, 0); transform: rotate(90deg); user-select: auto;">
+                            <path d="M11.707 2.293A.997.997 0 0 0 11 2H6a.997.997 0 0 0-.707.293l-3 3A.996.996 0 0 0 2 6v5c0 .266.105.52.293.707l10 10a.997.997 0 0 0 1.414 0l8-8a.999.999 0 0 0 0-1.414l-10-10zM13 19.586l-9-9V6.414L6.414 4h4.172l9 9L13 19.586z" style="user-select: auto;"></path><circle cx="8.353" cy="8.353" r="1.647" style="user-select: auto;"></circle>
+                        </svg>
+                        <span class="text-xs"> <b>Brand:</b> Lenovo</span>
+                        </p>
 
                  
-            </div>
-                <div class=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-0  sm:gap-40" >
-                    <div class="col-span-1">
-                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md"><b>Model:</b> Lenovo t450</p>
-                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md"><b>Storage capacity:</b> 1TB</p>
-                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md"><b>RAM:</b> 8GB</p>
-                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md"><b>Processor:</b> intel core i5</p>
-                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md"><b>Graphics card:</b> intel</p>
+                </div>
+                <div class=" grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2 md:gap-10  lg:gap-20" >
+                    <div class="col-span-2 md:col-span-1">
+                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md md:text-sm text-xs"><b>Model:</b> Lenovo t450</p>
+                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md md:text-sm text-xs"><b>Storage capacity:</b> 1TB</p>
+                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md md:text-sm text-xs"><b>RAM:</b> 8GB</p>
+                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md md:text-sm text-xs"><b>Processor:</b> intel core i5</p>
+                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md md:text-sm text-xs"><b>Graphics card:</b> intel</p>
                     </div>
 
-                    <div class="col-span-1">
-                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md"><b>Operating system:</b> Windows 10 pro</p>
-                         <p class="bg-gray-200 px-4 py-2 my-5 rounded-md"><b>Color:</b> Black</p>
+                    <div class="col-span-2 md:col-span-1">
+                        <p class="bg-gray-200 px-4 py-2 my-5 rounded-md md:text-sm text-xs"><b>Operating system:</b> Windows 10 pro</p>
+                         <p class="bg-gray-200 px-4 py-2 my-5 rounded-md md:text-sm text-xs"><b>Color:</b> Black</p>
                        
                     </div>
                 </div>
@@ -79,8 +79,11 @@
         </div>
         <div class="col-span-2 md:col-span-1 flex-col">
             <div class="flex items-center gap-5 bg-white  rounded-md px-5 py-5 mb-5">
-                <p class="text-4xl font-bold text-black">&#8358; 186,000</p>
-                <span class="bg-gray-200 px-5 py-3 rounded-md font-semibold text-gray-700">Negotiable</span>
+                <p class="text-4xl font-bold text-black">
+                    &#8358; 186,000
+                </p>
+                <sup class="bg-gray-600 px-2 py-1 rounded-md font-semibold text-white text-xs sups">Negotiable</sup>
+                
             </div>
             <div class=" bg-white  rounded-md px-5 py-5 mb-5">
                 <div class="flex items-center gap-5">
@@ -118,7 +121,7 @@
                 <object style="border:0; height: 230px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34015.943594576835!2d-106.43242624069771!3d31.677719472407432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d90e99d597b%3A0x6cd3eb9a9fcd23f1!2sCourtyard+by+naijlist!5e0!3m2!1sen!2sbd!4v1533791187584"></object>
             </div>
 
-        <div class="col-span-2 md:col-span-1 px-5 py-5 bg-white">NOTE: warning about naijlist</div>
+        <div class="col-span-2 md:col-span-1 px-5 py-5 bg-white mb-20">NOTE: warning about naijlist</div>
             
         </div>
         
