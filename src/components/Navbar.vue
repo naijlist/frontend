@@ -1,13 +1,13 @@
 <template>
-    <header class="fixed flex justify-between items-center px-10 bg-primary h-20 w-full">
+    <header class="fixed z-40 flex justify-between items-center px-10 bg-primary h-20 w-full">
         <router-link to="/" class="flex gap-2 items-center">
             <img src="../assets/list.png" alt="logo" class="w-8">
             <h3 class="text-white font-semibold text-2xl" >Naijlist</h3>
         </router-link>
             <!-- <img src="" alt=""> -->
 
-        <ul class="flex justify-between space-x-6 text-black hidden lg:flex">
-            <li class="text-white border border-2 hover:bg-primaryDark duration-500 transition ease-in rounded-md py-2 px-4"> 
+        <ul class="justify-between space-x-6 text-black hidden lg:flex">
+            <li class="text-white border  hover:bg-primaryDark duration-500 transition ease-in rounded-md py-2 px-4"> 
                 <router-link to="/dashboard" class="flex"> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: white;transform: ;msFilter:;"><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4z"></path><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path></svg>
                 &nbsp; Post ads</router-link> </li>

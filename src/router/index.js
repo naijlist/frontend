@@ -4,7 +4,7 @@ import AdsDetails from '../views/AdsDetails.vue'
 import Signup from '../views/Signup.vue'
 import Auth from '../views/Auth.vue'
 import Dashboard from '@/views/Dashboard'
-
+import MyAds from '@/views/MyAds'
 const routes = [
   {
     path: '/',
@@ -13,7 +13,7 @@ const routes = [
   },
   {
     path: '/signup',
-    name:"signup",
+    name: "signup",
     component: Signup
   },
   {
@@ -24,12 +24,20 @@ const routes = [
   {
     path: '/ads-details/:id',
     name: 'AdsDetails',
-    component:AdsDetails
+    component: AdsDetails
   },
   {
     path: '/dashboard',
     name: 'dashboard',
     component: Dashboard,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/my-ads',
+    name: 'MyAds',
+    component: MyAds,
     meta: {
       requiresAuth: true
     }
@@ -42,9 +50,9 @@ const router = createRouter({
 })
 
 
-router.beforeEach((to, from, next)=> {
+router.beforeEach((to, from, next) => {
   const loggedIn = localStorage.getItem('user') || true
-  if(to.matched.some(record => record.meta.requiresAuth) && !loggedIn) {
+  if (to.matched.some(record => record.meta.requiresAuth) && !loggedIn) {
     next('/')
   }
   next()
