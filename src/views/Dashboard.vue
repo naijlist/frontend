@@ -42,8 +42,8 @@
       </ul>
    </div>
 </div>
-<div class=" py-28 z-10 px-72 flex gap-10 text-lg leading-10">
-   <button class="hover:scale-105 ease-out transition-300 cursor-pointer bg-gradient-to-r from-secondary to-dashboardPrimary rounded-md text-white px-5 py-5">
+<div class=" py-28 z-10 px-72 grid lg:grid-cols-3 gap-16 text-lg leading-10">
+   <div class="hover:scale-105 ease-out transition-300 cursor-pointer bg-gradient-to-r from-secondary to-dashboardPrimary w-52 h-40 rounded-md text-white px-5 py-5">
       <div class="flex justify-start">
          <div class="bg-white w-10 h-10 rounded-lg">
             <img src="../assets/check.png" class="w-10 h-10" />
@@ -54,7 +54,7 @@
          <div class="flex justify-end">
             <p class="text-4xl">10</p>
          </div>
-   </button>
+   </div>
    <div class="bg-gradient-to-r from-dashboardPreNursery to-primary max-w-52 w-52 h-40 rounded-md text-white px-5 py-5">
       <div class="flex justify-start">
          <div class="bg-white w-9 h-9 rounded-sm flex justify-center items-center">

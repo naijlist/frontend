@@ -1,0 +1,6 @@
+{
+  "appId": "com.naijlist",
+  "appName": "naijlist",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

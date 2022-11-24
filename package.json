@@ -4,9 +4,18 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "ionic:build": "npm run build",
+    "ionic:serve": "npm run serve"
   },
   "dependencies": {
+    "@capacitor/app": "4.1.0",
+    "@capacitor/cli": "4.4.0",
+    "@capacitor/core": "4.4.0",
+    "@capacitor/haptics": "4.0.1",
+    "@capacitor/ios": "4.4.0",
+    "@capacitor/keyboard": "4.0.1",
+    "@capacitor/status-bar": "4.0.1",
     "@heroicons/vue": "^1.0.6",
     "autoprefixer": "9",
     "core-js": "^3.6.5",
