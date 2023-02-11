@@ -1,7 +1,14 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+/** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
 module.exports = {
-  content: ['./public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
+    "./app.vue",
+  ],
   theme: {
     colors: {
       primary: '#5534A5',
@@ -20,13 +27,7 @@ module.exports = {
       blue: colors.blue,
       gray: colors.gray,
     },
-    screens: {
-      'xs': '475px',
-      ...defaultTheme.screens,
-    },
     extend: {},
   },
-  plugins: [
-    require('tailwind-scrollbar-hide')
-  ],
+  plugins: [require('tailwind-scrollbar-hide')],
 }

@@ -1,7 +1,0 @@
-{
-  "name": "naijlist",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "custom"
-}
