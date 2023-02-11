@@ -1,0 +1,1 @@
+import{_ as a,a as _}from"./Footer.521adcd2.js";import{a as c,b as r,f as o,x as s,o as f}from"./entry.f9b9c85c.js";const l={};function m(e,d){const t=a,n=_;return f(),r("div",null,[o(t),s(e.$slots,"default"),o(n)])}const i=c(l,[["render",m]]);export{i as default};

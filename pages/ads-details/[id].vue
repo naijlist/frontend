@@ -87,7 +87,7 @@
             </div>
             <div class=" bg-white  rounded-md px-5 py-5 mb-5">
                 <div class="flex items-center gap-5">
-                    <img src="../assets/sals.jpg" class="rounded-md w-16" alt="">
+                    <!-- <img src="../assets/sals.jpg" class="rounded-md w-16" alt=""> -->
                     <div>
                         <p class="font-bold text-xl flex">Salscode &nbsp; 
                             <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" width="24" height="24" style="fill: rgba(85, 52, 165, 1);transform: ;msFilter:;">
