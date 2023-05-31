@@ -27,9 +27,9 @@
             </div>
             <hr/>
             
-            <div class="px-5 py-5">
+            <div class=" py-5">
                 <h3 class="text-2xl  mb-4">Specification</h3>
-                <div class="flex  py-5 gap-5 sm:gap-10">
+                <div class="flex  mt-2 gap-5 sm:gap-10">
                         <p class="flex gap-2 justify-center items-center text-gray-700">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" style="fill: rgb(0, 0, 0); user-select: auto;">
                                 <path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm11-6h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 6h-4V5h4v4zm-9 4H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm-1 6H5v-4h4v4zm8-6c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z" style="user-select: auto;"></path>
@@ -87,7 +87,7 @@
             </div>
             <div class=" bg-white  rounded-md px-5 py-5 mb-5">
                 <div class="flex items-center gap-5">
-                    <!-- <img src="../assets/sals.jpg" class="rounded-md w-16" alt=""> -->
+                    <img src="/imgs/sals.jpg" class="rounded-md w-16" alt="">
                     <div>
                         <p class="font-bold text-xl flex">Salscode &nbsp; 
                             <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" width="24" height="24" style="fill: rgba(85, 52, 165, 1);transform: ;msFilter:;">
