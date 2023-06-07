@@ -3,6 +3,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     'AdsList': typeof import("../components/AdsList.vue")['default']
     'AdsTable': typeof import("../components/AdsTable.vue")['default']
+    'Card': typeof import("../components/Card.vue")['default']
     'Categories': typeof import("../components/Categories.vue")['default']
     'Footer': typeof import("../components/Footer.vue")['default']
     'Hero': typeof import("../components/Hero.vue")['default']
@@ -27,6 +28,7 @@ declare module '@vue/runtime-core' {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyAdsList': typeof import("../components/AdsList.vue")['default']
     'LazyAdsTable': typeof import("../components/AdsTable.vue")['default']
+    'LazyCard': typeof import("../components/Card.vue")['default']
     'LazyCategories': typeof import("../components/Categories.vue")['default']
     'LazyFooter': typeof import("../components/Footer.vue")['default']
     'LazyHero': typeof import("../components/Hero.vue")['default']
@@ -54,6 +56,7 @@ declare module '@vue/runtime-core' {
 
 export const AdsList: typeof import("../components/AdsList.vue")['default']
 export const AdsTable: typeof import("../components/AdsTable.vue")['default']
+export const Card: typeof import("../components/Card.vue")['default']
 export const Categories: typeof import("../components/Categories.vue")['default']
 export const Footer: typeof import("../components/Footer.vue")['default']
 export const Hero: typeof import("../components/Hero.vue")['default']
@@ -78,6 +81,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyAdsList: typeof import("../components/AdsList.vue")['default']
 export const LazyAdsTable: typeof import("../components/AdsTable.vue")['default']
+export const LazyCard: typeof import("../components/Card.vue")['default']
 export const LazyCategories: typeof import("../components/Categories.vue")['default']
 export const LazyFooter: typeof import("../components/Footer.vue")['default']
 export const LazyHero: typeof import("../components/Hero.vue")['default']

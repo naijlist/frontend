@@ -105,7 +105,7 @@
 					</div>
 					<div>
 						<button type="submit" class="w-full flex justify-center bg-primary  hover:bg-pink-500 text-white p-3  rounded-md tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
-                            Sign in
+                            Sign up
                         </button>
 					</div>
                     <p className="mt-3 mb-4 text-center text-sm ">

@@ -17,6 +17,7 @@ module.exports = {
       dashboardSecondary: '#B9E0FF',
       dashboardNursery: '#8D72E1',
       dashboardPreNursery: '#8D9EFF',
+      warning: '#FFB765',
       white: '#fff',
       black: colors.black,
       secondary: '#A85CF9',
