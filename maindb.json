@@ -1,0 +1,60 @@
+{
+    "categories": [
+        {
+            "title": "phones",
+            "icon": "phone.png"
+        },
+        {
+            "title": "laptops",
+            "icon": "laptop.png"
+        },
+        {
+            "title": "gadgets",
+            "icon": "gadget.png"
+        },
+        {
+            "title": "properties",
+            "icon": "house.png"
+        },
+        {
+            "title": "fashion",
+            "icon": "fashion-design.png"
+        },
+        {
+            "title": "funiture",
+            "icon": "furnitures.png"
+        },
+        {
+            "title": "pets",
+            "icon": "pets.png"
+        },
+        {
+            "title": "cars",
+            "icon": "car.png"
+        },
+        {
+            "title": "bike",
+            "icon": "bike.png"
+        },
+        {
+            "title": "job",
+            "icon": "job-seeker.png"
+        },
+        {
+            "title": "jewerries",
+            "icon": "jewellery.png"
+        },
+        {
+            "title": "Health beauty ",
+            "icon": "shampoo.png"
+        },
+        {
+            "title": "Sport outdoor",
+            "icon": "sport.png"
+        },
+        {
+            "title": "Food",
+            "icon": "wheat-sack.png"
+        }
+    ]
+}

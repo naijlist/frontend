@@ -91,7 +91,7 @@
 					</div>
 					<div>
 						<button type="submit" class="w-full flex justify-center bg-primary  hover:bg-pink-500 text-white p-3  rounded-md tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
-                            Sign in
+                           {{ isLoading ? 'Loading...' : 'Sign in' }}
                         </button>
 					</div>
                     <p className="mt-3 mb-4 text-center text-sm ">
@@ -115,17 +115,19 @@
   </div>
 </template>
 
-<script>
-export default {
-    setup () {
-        function userSignup(e) {
-            e.preventDefault();
-            console.log('Signing up....')
-        }
-
-        return { userSignup }
+<script setup>
+import {usePOST} from '../hooks/usePOST'
+    const loginCallback = (data) => {
+        localStorage.setItem('userDetails', data)
+        console.log(data);
     }
-}
+    const {mutate, isLoading, isError} = usePOST('http://localhost:5000/login', loginCallback)
+    function userSignup(e) {
+        e.preventDefault();
+        console.log('Signing up....')
+        mutate({email: "salissadiq@gmail.com", password: "password"})
+    }
+
 </script>
 
 <style scoped>

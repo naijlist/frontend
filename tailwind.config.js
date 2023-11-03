@@ -11,6 +11,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      bgColor: '#D9D9D9',
       primary: '#5534A5',
       primaryDark: '#3f1c92',
       dashboardPrimary: '#6C4AB6',
@@ -19,6 +20,7 @@ module.exports = {
       dashboardPreNursery: '#8D9EFF',
       warning: '#FFB765',
       white: '#fff',
+      textColor: '#333333',
       black: colors.black,
       secondary: '#A85CF9',
       red: colors.red,
