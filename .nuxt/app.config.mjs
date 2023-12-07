@@ -1,5 +1,5 @@
 
-import { defuFn } from '/Users/salscodes/naijlist/node_modules/defu/dist/defu.mjs'
+import { defuFn } from '/home/salissadiq/naijlist/frontend/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 

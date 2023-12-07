@@ -6,10 +6,10 @@
     "module": true,
     "resourceType": "script"
   },
-  "/Users/salscodes/naijlist/node_modules/nuxt/dist/app/entry.mjs": {
+  "/home/salissadiq/naijlist/frontend/node_modules/nuxt/dist/app/entry.mjs": {
     "resourceType": "script",
     "module": true,
     "isEntry": true,
-    "file": "/Users/salscodes/naijlist/node_modules/nuxt/dist/app/entry.mjs"
+    "file": "/home/salissadiq/naijlist/frontend/node_modules/nuxt/dist/app/entry.mjs"
   }
 }
