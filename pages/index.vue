@@ -1,6 +1,7 @@
 <template>
   <section>
     <Hero />
+    <categories />
   </section>
 </template>
 
