@@ -20,7 +20,7 @@ export default {
       dashboardPreNursery: "#8D9EFF",
       warning: "#FFB765",
       white: "#fff",
-      textColor: "#333333",
+      textColor: "#575757",
       black: colors.black,
       secondary: "#A85CF9",
       red: colors.red,
