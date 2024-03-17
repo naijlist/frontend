@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="bg-bgColor">
     <Navbar />
     <slot />
   </section>

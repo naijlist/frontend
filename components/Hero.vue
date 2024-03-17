@@ -1,16 +1,18 @@
 <template>
   <section
-    class="flex w-full bg-primary px-[150px] py-10 sm:pt-10 mt-20 sm:mt-20"
+    class="flex flex-col lg:flex-row w-full bg-primary lg:px-[150px] py-10 sm:pt-10 mt-20 sm:mt-20"
   >
     <!-- Search input -->
-    <div class="w-1/2 px-10 flex flex-col gap-5 justify-center">
+    <div
+      class="w-full lg:w-1/2 px-6 lg:px-10 flex flex-col gap-5 justify-center"
+    >
       <h1
-        class="text text-white text-semibold text-3xl font-bold sm:text-5xl pb-4 font-nunito"
+        class="text text-white text-center text-semibold lg:text-6xl text-[30px] font-bold mb-1 lg:mb-4 font-nunito"
       >
         Google of classified ads
       </h1>
       <p
-        class="text-white sm:text-base text-sm text-semibold font-nunito w-[50rem]"
+        class="text-white sm:text-base text-[14px] lg:text-lg text-semibold text-center font-nunito lg:w-[50rem]"
       >
         Buy and sell anything, from used cars to mobile phones and computers. Or
         explore properties, job opportunities, and more. Your one-stop shop for
@@ -43,17 +45,17 @@
       </div> -->
       <div>
         <form class="flex" @submit="searchAds">
-          <div class="flex bg-white w-full py-[1px] pl-5 rounded-2xl">
+          <div class="flex bg-white w-full py-[1px] pl-2 lg:pl-5 rounded-2xl">
             <input
               v-model="query"
-              class="flex-1 py-3 px-2 rounded-tl-md rounded-bl-md focus:outline-none text-textColor font-josefineSans"
+              class="py-3 flex-1 px-2 rounded-3xl focus:outline-none text-xs lg:text-lg text-textColor font-josefineSans"
               type="text"
               placeholder="Search for products  e.g phones, cars"
             />
             <button
               class="flex gap-2 bg-black text-white justify-center items-center jus rounded-2xl px-5 font-light text-sm"
             >
-              <span>Search</span>
+              <span class="hidden lg:block">Search</span>
               <svg
                 width="22"
                 height="22"
@@ -77,7 +79,7 @@
         </form>
       </div>
     </div>
-    <div class="w-1/2 flex justify-center">
+    <div class="w-1/2 hidden lg:flex justify-center">
       <img src="/hero_side_image.svg" alt="" class="aspect-auto" />
     </div>
   </section>

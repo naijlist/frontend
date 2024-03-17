@@ -1,8 +1,8 @@
 <template>
   <section
-    class="flex flex-col w-[90%] py-5 text-white container mt-10 mx-auto m-auto p-auto"
+    class="flex flex-col w-full lg:w-[90%] py-2 lg:py-5 text-white container mt-10 mx-auto m-auto p-auto bg-white px-5 rounded-xl"
   >
-    <div class="flex justify-between text-textColor mb-5">
+    <div class="flex justify-between text-textColor mb-5 text-sm lg:text-base">
       <span>Categories</span>
       <span class="flex items-center"
         >see all

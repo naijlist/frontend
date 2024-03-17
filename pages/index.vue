@@ -2,6 +2,8 @@
   <section>
     <Hero />
     <categories />
+    <AdsList title="Featured ads" />
+    <AdsList title="Popular ads" />
   </section>
 </template>
 

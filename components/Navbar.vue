@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed inset-0 z-40 flex justify-between items-center px-[100px] bg-primary h-20 w-full"
+    class="fixed inset-0 z-40 flex justify-between items-center px-[25px] lg:px-[100px] bg-primary h-20 w-full"
   >
     <div class="flex justify-center items-center gap-5">
       <!-- <div @click="handleSetHambuger" class="cursor-pointer">
