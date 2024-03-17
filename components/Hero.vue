@@ -1,19 +1,22 @@
 <template>
-  <div
-    class="hero--container flex justify-center items-center bg-blend-multiply bg-primary px-10 sm:px-0 py-10 sm:pt-10 mt-20 sm:mt-20"
+  <section
+    class="flex w-full bg-primary px-16 sm:px-0 py-10 sm:pt-10 mt-20 sm:mt-20"
   >
     <!-- Search input -->
-    <div class="w-full max-w-screen-sm">
+    <div class="w-1/2 px-10 flex flex-col gap-5 justify-center">
       <h1
-        class="text text-center text-white text-semibold text-3xl font-semibold sm:text-5xl pb-4"
+        class="text text-white text-semibold text-3xl font-bold sm:text-5xl pb-4 font-nunito"
       >
         Google of classified ads
       </h1>
-      <p class="text-white sm:text-base text-sm text-semibold text-center">
-        Buy And Sell Everything From Used Cars To Mobile Phones And Computers,
-        Or Search For Property, Jobs And More.
+      <p
+        class="text-white sm:text-base text-sm text-semibold font-nunito w-[50rem]"
+      >
+        Buy and sell anything, from used cars to mobile phones and computers. Or
+        explore properties, job opportunities, and more. Your one-stop shop for
+        all your needs
       </p>
-      <div class="flex gap-1 justify-center items-center py-5">
+      <!-- <div class="flex gap-1 items-center py-5">
         <svg
           width="25"
           height="24"
@@ -37,33 +40,47 @@
             <option>Lagos</option>
           </select>
         </div>
-      </div>
+      </div> -->
       <div>
         <form class="flex" @submit="searchAds">
-          <input
-            v-model="query"
-            class="flex-1 py-3 px-2 rounded-tl-md rounded-bl-md focus:outline-none text-textColor"
-            type="text"
-            placeholder="Search for anything in Nigeria"
-          />
-          <button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-12 w-12 px-3 py-3 cursor-pointer flex items-center rounded-tr-md rounded-br-md bg-black text-red hover:bg-gray-800 duration-500 transition ease-in"
-              width="24"
-              height="24"
-              style="fill: white; user-select: auto"
+          <div class="flex bg-white w-full py-[1px] pl-5 rounded-2xl">
+            <input
+              v-model="query"
+              class="flex-1 py-3 px-2 rounded-tl-md rounded-bl-md focus:outline-none text-textColor font-josefineSans"
+              type="text"
+              placeholder="Search for products  e.g phones, cars"
+            />
+            <button
+              class="flex gap-2 bg-black text-white justify-center items-center jus rounded-2xl px-5 font-light text-sm"
             >
-              <path
-                d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
-                style="user-select: auto"
-              ></path>
-            </svg>
-          </button>
+              <span>Search</span>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.8933 16.5331C18.6919 16.2689 19.6067 16.4545 20.242 17.0898L23.3773 20.2252C24.2747 21.1226 24.2747 22.5776 23.3773 23.475C22.4799 24.3723 21.025 24.3723 20.1275 23.475L16.9921 20.3396C16.3568 19.7043 16.1713 18.7895 16.4355 17.991L14.3018 15.8572L15.7596 14.3994L17.8933 16.5331Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.62964 9.97424C1.62964 5.41971 5.32181 1.72754 9.87634 1.72754C14.4309 1.72754 18.123 5.41971 18.123 9.97424C18.123 14.5288 14.4309 18.2209 9.87634 18.2209C5.32181 18.2209 1.62964 14.5288 1.62964 9.97424ZM9.87634 3.78921C6.46044 3.78921 3.69131 6.55834 3.69131 9.97424C3.69131 13.3901 6.46044 16.1593 9.87634 16.1593C13.2922 16.1593 16.0614 13.3901 16.0614 9.97424C16.0614 6.55834 13.2922 3.78921 9.87634 3.78921Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
         </form>
       </div>
     </div>
-  </div>
+    <div class="w-1/2 flex justify-center">
+      <img src="/hero_side_image.svg" alt="" class="aspect-auto" />
+    </div>
+  </section>
 </template>
 
 <script setup>
