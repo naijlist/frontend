@@ -30,7 +30,12 @@ export default {
       blue: colors.blue,
       gray: colors.gray,
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ["Nunito", "sans-serif"],
+        josefineSans: ["Josefin Sans", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
