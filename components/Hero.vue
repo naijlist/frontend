@@ -1,6 +1,6 @@
 <template>
   <section
-    class="flex w-full bg-primary px-16 sm:px-0 py-10 sm:pt-10 mt-20 sm:mt-20"
+    class="flex w-full bg-primary px-[150px] py-10 sm:pt-10 mt-20 sm:mt-20"
   >
     <!-- Search input -->
     <div class="w-1/2 px-10 flex flex-col gap-5 justify-center">
