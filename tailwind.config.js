@@ -22,14 +22,14 @@ export default {
       dashboardPreNursery: '#8D9EFF',
       warning: '#FFB765',
       white: '#FFFFFF',
-      black: colors.black,
       secondary: '#A85CF9',
       red: colors.red,
       zinc: colors.gray,
       purple: colors.purple,
       slate: colors.slate,
       blue: colors.blue,
-      gray: colors.gray
+      gray: colors.gray,
+      black: '#000000'
     },
     extend: {
       fontFamily: {
