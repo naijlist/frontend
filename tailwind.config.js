@@ -12,7 +12,7 @@ export default {
       bg_color: '#D9D9D9',
       textColor: '#575757',
       ac: '#FFB765',
-      bgColor: '#E5E5E5',
+      bgColor: '#F9F9F9',
       footerBg: '#D9D9D9',
       primary: '#5534A5',
       primaryDark: '#3f1c92',
