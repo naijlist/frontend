@@ -76,6 +76,7 @@
                     placeholder="Name"
                   />
                 </div>
+
                 <div>
                   <input
                     type="email"
@@ -153,11 +154,13 @@
                   </span>
                 </div>
               </div>
-              <div class="flex justify-end w-full mt-1">
+              <!-- <div class="flex justify-end w-full mt-1">
                 <p class="text-[#FF4848] text-sm">Reset password</p>
-              </div>
+              </div> -->
               <div class="mt-8">
-                <button class="bg-[#050004] w-[350px] text-white py-2 rounded-md">Sign in</button>
+                <button class="bg-[#050004] w-[350px] text-white py-2 rounded-md">
+                  Create an account
+                </button>
               </div>
             </div>
           </form>

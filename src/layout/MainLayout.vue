@@ -1,9 +1,11 @@
 <template>
-  <div>
+  <main class="bg-bgColor">
     <AppNavber />
-    <router-view />
+    <div>
+      <router-view />
+    </div>
     <AppFooter />
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">
