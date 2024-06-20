@@ -4,6 +4,7 @@ export default {
   content: ['./src/**/*.{js,vue,ts}'],
   theme: {
     colors: {
+      ac: '#FFB765',
       pc: '#A95CF9',
       pc2: '#5634A5',
       sc1: '#4C7CE5',
@@ -35,7 +36,8 @@ export default {
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
         josefineSans: ['Josefin Sans', 'sans-serif'],
-        plusJakarta: ['Plus Jakarta Sans', 'sans-serif']
+        plusJakarta: ['Plus Jakarta Sans', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif']
       }
     }
   },
