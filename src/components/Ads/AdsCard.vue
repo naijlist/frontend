@@ -1,6 +1,6 @@
 <template>
   <div class="w-[270px] bg-opacity-[100%] rounded-xl mb-0">
-    <div class="flex flex-col">
+    <router-link :to="`/preview/${adsData}`" class="flex flex-col">
       <img src="@/assets/ads-sample.svg" class="aspect-square object-cover w-full" alt="" />
       <div class="flex justify-end">
         <span class="-mt-5 pr-5 absolute">
@@ -44,10 +44,12 @@
           </p>
         </div>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps(['adsData'])
+</script>
 
 <style scoped></style>
