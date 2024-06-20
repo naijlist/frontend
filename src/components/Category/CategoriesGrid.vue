@@ -2,8 +2,8 @@
   <div class="flex flex-col w-11/12 py-5 container mt-10 mx-auto">
     <div class="flex justify-between items-center font-nunito text-textColor mb-3">
       <span class="text-xl">Categories</span>
-      <span class="flex items-center"
-        >See all
+      <button class="flex items-center">
+        See all
         <span
           ><svg
             width="18"
@@ -20,7 +20,7 @@
             />
           </svg>
         </span>
-      </span>
+      </button>
     </div>
     <div
       class="flex sm:justify-center items-center overflow-x-scroll hide-scroll-bar bg-white lg:h-[150px] rounded-md py-3 sm:py-0"
