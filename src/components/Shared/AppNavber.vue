@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary fixed flex w-screen items-center justify-around -px-10 font-nunito">
+  <div class="bg-primary fixed z-10 flex w-screen items-center justify-around -px-10 font-nunito">
     <div>
       <img src="@/assets/logo.svg" class="w-[120px] h-[80px]" alt="" />
     </div>
