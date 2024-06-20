@@ -8,6 +8,8 @@ import AdsGrid from './../components/Ads/AdsGrid.vue'
   <main class="pt-[80px]">
     <HeroComponent />
     <CategoriesGrid />
-    <AdsGrid />
+    <AdsGrid :headerTitle="`Featured Ads`" />
+    <AdsGrid :headerTitle="`Gadgets`" />
+    <AdsGrid :headerTitle="`Properties`" />
   </main>
 </template>
