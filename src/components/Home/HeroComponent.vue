@@ -1,8 +1,14 @@
 <template>
-  <div class="bg-primary w-screen flex items-center text-white font-nunito">
-    <div class="w-full flex flex-col gap-1 pl-[150px]">
-      <h1 class="font-bold text-[60px]">Google of Classified Ads</h1>
-      <h4 class="font-light text-base w-[45rem]">
+  <div
+    class="bg-primary w-screen flex sm:flex-row flex-col items-center text-white font-nunito sm:py-5 py-10"
+  >
+    <div class="w-full flex flex-col justify-between px-[50px]">
+      <h1 class="font-bold lg:text-[50px] xl:text[60px] md:text-[40px]">
+        Google of Classified Ads
+      </h1>
+      <h4
+        class="font-light xl:text-base lg:text-[14px] md:text-[12px] text-[10px] xl:w-[45rem] lg:w-[40rem]"
+      >
         Buy and sell anything, from used cars to mobile phones and computers. Or explore properties,
         job opportunities, and more. Your one-stop shop for all your needs
       </h4>
@@ -14,7 +20,7 @@
           class="focus:outline-none w-full rounded-2xl px-5"
           placeholder="Search for products  e.g phones, cars"
         />
-        <button class="bg-black text-white flex items-center gap-2 py-[14px] px-6 rounded-2xl">
+        <button class="bg-black text-white flex items-center gap-2 py-[10px] px-6 rounded-2xl">
           Search
           <span
             ><svg
@@ -39,7 +45,7 @@
         </button>
       </form>
     </div>
-    <div class="w-full flex justify-center">
+    <div class="w-full py-10 sm:flex hidden justify-center">
       <img src="@/assets/hero_img.svg" alt="" class="aspect-auto" />
     </div>
   </div>

@@ -30,8 +30,100 @@
             </template>
           </Carousel>
         </div>
-        <div>2</div>
-        <div>3</div>
+        <div class="flex gap-5 mt-5 justify-center items-center">
+          <div class="bg-[#DADADA] p-5 rounded-md">
+            <img
+              src="@/assets/laptop-detail1.svg"
+              alt="Laptop"
+              class="aspect-square object-cover w-[100px]"
+            />
+          </div>
+          <div class="bg-[#DADADA] p-5 rounded-md">
+            <img
+              src="@/assets/laptop-detail3.svg"
+              alt="Laptop"
+              class="aspect-square object-cover w-[100px]"
+            />
+          </div>
+          <div class="bg-[#DADADA] p-5 rounded-md">
+            <img
+              src="@/assets/laptop-detail4.svg"
+              alt="Laptop"
+              class="aspect-square object-cover w-[100px]"
+            />
+          </div>
+          <div class="bg-[#DADADA] p-5 rounded-md">
+            <img
+              src="@/assets/laptop-detail5.svg"
+              alt="Laptop"
+              class="aspect-square object-cover w-[100px]"
+            />
+          </div>
+        </div>
+        <div class="mt-10">
+          <h2 class="font-plusJakarta font-bold text-3xl mb-5">Specification</h2>
+          <Divider />
+          <div class="flex justify-between font-plusJakarta font-semibold mt-5 text-base">
+            <div class="flex gap-3">
+              <Icon icon="category" />
+              <p class="">CATEGORY: <span>Gadgets</span></p>
+            </div>
+            <div class="flex gap-3">
+              <Icon icon="tag" />
+              <p class="">BRAND: <span>Apple</span></p>
+            </div>
+            <div class="flex gap-3">
+              <Icon icon="condition" />
+              <p class="">CONDITION: <span>Brand New</span></p>
+            </div>
+          </div>
+          <div class="flex flex-col font-plusJakarta text-[16px] my-10">
+            <div class="flex justify-between">
+              <div class="flex">
+                <span>MODEL:</span>
+                <span class="text-textColor">2023 M3 Pro 14-inch</span>
+              </div>
+              <div class="flex">
+                <span>TYPE:</span>
+                <span class="text-textColor">Laptop</span>
+              </div>
+              <div class="flex">
+                <span>SUBTYPE:</span>
+                <span class="text-textColor">Ultrabook</span>
+              </div>
+            </div>
+
+            <div class="flex justify-between">
+              <div class="flex">
+                <span>MODEL:</span>
+                <span class="text-textColor">2023 M3 Pro 14-inch</span>
+              </div>
+              <div class="flex">
+                <span>TYPE:</span>
+                <span class="text-textColor">Laptop</span>
+              </div>
+              <div class="flex">
+                <span>SUBTYPE:</span>
+                <span class="text-textColor">Ultrabook</span>
+              </div>
+            </div>
+
+            <div class="flex justify-between">
+              <div class="flex">
+                <span>MODEL:</span>
+                <span class="text-textColor">2023 M3 Pro 14-inch</span>
+              </div>
+              <div class="flex">
+                <span>TYPE:</span>
+                <span class="text-textColor">Laptop</span>
+              </div>
+              <div class="flex">
+                <span>SUBTYPE:</span>
+                <span class="text-textColor">Ultrabook</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="bg-white w-[32%] rounded-md px-5 py-7 flex flex-col gap-2">
         <div class="flex justify-between items-center">
@@ -78,7 +170,7 @@
           </div>
         </div>
         <div class="flex items-center justify-between font-plusJakarta text-xs font-medium mt-5">
-          <button class="border flex items-center gap-2 rounded-md px-7 py-[6px]">
+          <button class="border border-[#DADADA] flex items-center gap-2 rounded-md px-7 py-[6px]">
             <Icon icon="chat" /> Chat Seller
           </button>
 
