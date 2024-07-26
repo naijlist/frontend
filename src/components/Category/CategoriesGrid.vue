@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col w-11/12 py-5 container mt-10 mx-auto">
-    <div class="flex justify-between items-center font-nunito text-textColor mb-3">
-      <span class="text-xl">Categories</span>
+  <div class="mt-10">
+    <div
+      class="flex justify-between items-center font-nunito text-textColor mb-3 w-full max-w-[95%] md:max-w-[85%] mx-auto"
+    >
+      <span class="lg:text-xl">Categories</span>
       <button class="flex items-center">
         See all
         <span
@@ -22,25 +24,48 @@
         </span>
       </button>
     </div>
-    <div
-      class="flex sm:justify-center items-center overflow-x-scroll hide-scroll-bar bg-white lg:h-[150px] rounded-md py-3 sm:py-0"
+    <Carousel
+      class="relative w-full max-w-[95%] md:max-w-[85%] mx-auto mt-2 bg-white rounded-md"
+      :opts="{ align: 'start' }"
     >
-      <div class="flex flex-nowrap">
-        <div
+      <CarouselContent>
+        <CarouselItem
           v-for="(category, index) in categories"
-          :key="`${index + 1}: ${category?.title}`"
-          class="inline-block sm:px-[15px] px-[10px]"
+          :key="index"
+          class="md:basis-[100px] basis-[80px] lg:basis-[150px] py-2"
         >
-          <CategoryItem :category="category" />
-        </div>
-      </div>
-    </div>
+          <router-link :to="category.title">
+            <Card class="hover:shadow-xl border-none p-0 cursor-pointer">
+              <CardContent class="flex aspect-square items-center justify-center p-0">
+                <div class="flex flex-col justify-center items-center gap-3">
+                  <img
+                    :src="category.icon"
+                    :alt="category.title"
+                    class="aspect-square lg:w-[60px] w-[40px]"
+                  />
+                  <span class="lg:text-xs text-[9px]">{{ category.title }}</span>
+                </div>
+              </CardContent>
+            </Card>
+          </router-link>
+        </CarouselItem>
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
   </div>
 </template>
 
 <script setup lang="ts">
 import CategoryItem from './CategoryItem.vue'
-
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel'
+import { Card, CardContent } from '@/components/ui/card'
 const categories = [
   {
     title: 'phones',

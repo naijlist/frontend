@@ -11,12 +11,24 @@
           {{ category.title }}
         </p>
       </div>
+      <CarouselContent>
+        <CarouselItem v-for="(_, index) in 10" :key="index" class="md:basis-1/2 lg:basis-1/3">
+          <div class="p-1">
+            <Card>
+              <CardContent class="flex aspect-square items-center justify-center p-6">
+                <span class="text-3xl font-semibold">{{ index + 1 }}</span>
+              </CardContent>
+            </Card>
+          </div>
+        </CarouselItem>
+      </CarouselContent>
     </router-link>
   </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps(['category'])
+import { Card, CardContent } from '@/components/ui/card'
+import { CarouselContent, CarouselItem } from '@/components/ui/carousel'
 </script>
 
 <style scoped></style>

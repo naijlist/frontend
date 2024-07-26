@@ -1,9 +1,9 @@
 <template>
-  <div class="w-[270px] bg-opacity-[100%] rounded-xl mb-0">
-    <router-link :to="`/preview/${adsData}`" class="flex flex-col">
+  <div class="lg:w-[270px] w-[300px] min-w-[200px] bg-opacity-[100%] rounded-xl mb-0">
+    <router-link :to="`/preview/${adsData}`" class="flex flex-col gap-0">
       <img src="@/assets/ads-sample.svg" class="aspect-square object-cover w-full" alt="" />
       <div class="flex justify-end">
-        <span class="-mt-5 pr-5 absolute">
+        <span class="-mt-5 pr-5">
           <svg
             width="39"
             height="38"
@@ -32,14 +32,16 @@
       <div class="bg-white rounded-b-xl mt-0 px-5 py-3 flex flex-col gap-3">
         <div>
           <span
-            class="font-josefineSans bg-white shadow-lg rounded-lg text-xs text-textColor text-center px-2 py-[5px]"
+            class="font-josefineSans bg-white shadow-lg rounded-lg lg:text-xs text-[10px] text-textColor text-center px-2 py-[5px]"
             >Laptop</span
           >
         </div>
         <div class="flex flex-col gap-1">
-          <p class="font-nunito text-[18px]">MacBook Pro</p>
-          <p class="font-joesFinSans text-xs font-semibold text-sc1">N 3,000.00</p>
-          <p class="font-nunito text-sm font-light text-textColor flex items-center gap-1">
+          <p class="font-nunito lg:text-[18px] text-[14px]">MacBook Pro</p>
+          <p class="font-joesFinSans lg:text-xs text-[10px] font-semibold text-sc1">N 3,000.00</p>
+          <p
+            class="font-nunito lg:text-sm font-light text-textColor flex items-center gap-1 text-[10px]"
+          >
             <span><img src="@/assets/location.svg" alt="" /></span> Lokogoma Abuja
           </p>
         </div>

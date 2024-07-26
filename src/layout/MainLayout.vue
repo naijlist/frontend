@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-bgColor">
+  <main class="bg-bgColor w-screen max-w-screen overflow-hidden">
     <AppNavber />
     <div>
       <router-view />

@@ -1,10 +1,31 @@
 <template>
   <div class="pt-[100px] px-16">
-    <div class="flex items-center gap-2 font-plusJakarta text-textColor">
-      <span class="bg-white rounded-md px-2 py-1">All Categories</span> /
-      <span class="bg-white rounded-md px-2 py-1">Gadgets</span> /
-      <span class="bg-white rounded-md px-2 py-1">Laptop</span> /
-      <span class="text-black bg-white rounded-md px-2 py-1">Mac book pro</span>
+    <div>
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/"> All Categories </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>
+            <Slash />
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/docs/components/accordion.html"> Gadgets </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>
+            <Slash />
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbPage>Laptop</BreadcrumbPage>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>
+            <Slash />
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbPage>MacBook Pro</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
     </div>
 
     <div class="flex justify-center gap-10 w-full px-[50px] mt-10">
@@ -173,7 +194,7 @@
           <button class="border border-[#DADADA] flex items-center gap-2 rounded-md px-7 py-[6px]">
             <Icon icon="chat" /> Chat Seller
           </button>
-
+          <!-- <Button variant="outline">Hello</Button> -->
           <button class="bg-black text-white flex px-7 py-[6px] rounded-md items-center gap-2">
             <Icon icon="phone" />Call Seller
           </button>
@@ -188,6 +209,16 @@ import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 import Icon from '../../../../components/Icons/IconComponent.vue'
+import { Button } from '@/components/ui/button'
+import { Slash } from 'lucide-vue-next'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator
+} from '@/components/ui/breadcrumb'
 import Divider from '../../../../components/Shared/DividerComponent.vue'
 </script>
 
