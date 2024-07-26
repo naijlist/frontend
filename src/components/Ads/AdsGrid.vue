@@ -45,7 +45,7 @@
         </button>
       </div>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-10 sm:gap-14">
+    <div class="flex overflow-x-auto gap-x-4 gap-y-10 sm:gap-14">
       <AdsCard v-for="(ads, index) in [1, 2, 3, 4, 5]" :key="ads" :adsData="index" />
     </div>
   </div>
