@@ -1,10 +1,10 @@
 <template>
   <main class="bg-bgColor w-screen max-w-screen overflow-hidden">
     <AppNavber />
-    <div>
+    <div class="w-[100%] max-w-[100% overflow-hidden]">
       <router-view />
     </div>
-    <AppFooter />
+    <!-- <AppFooter /> -->
   </main>
 </template>
 
