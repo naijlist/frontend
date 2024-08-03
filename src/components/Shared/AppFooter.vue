@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col bg-[#E5E5E5] mt-[100px] w-screen">
+  <div class="flex flex-col bg-[#E5E5E5] mt-[100px] w-screen max-w-screen overflow-auto">
     <div
       class="flex items-center justify-around font-nunito font-medium text-textColor text-sm py-[50px]"
     >

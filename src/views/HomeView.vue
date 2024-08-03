@@ -5,11 +5,11 @@ import AdsGrid from './../components/Ads/AdsGrid.vue'
 </script>
 
 <template>
-  <main class="pt-[80px]">
+  <main class="pt-[80px] w-screen max-screen max-w-screen overflow-hidden">
     <HeroComponent />
     <CategoriesGrid />
-    <!-- <AdsGrid :headerTitle="`Featured Ads`" /> -->
-    <AdsGrid :headerTitle="`Gadgets`" />
-    <AdsGrid :headerTitle="`Properties`" />
+    <AdsGrid :headerTitle="`Featured Ads`" :identity="`one`" />
+    <AdsGrid :headerTitle="`Gadgets`" :identity="`two`" />
+    <AdsGrid :headerTitle="`Properties`" :identity="`three`" />
   </main>
 </template>

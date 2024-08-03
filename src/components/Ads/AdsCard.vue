@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:w-[270px] w-[300px] min-w-[200px] bg-opacity-[100%] rounded-xl mb-0">
+  <div class="lg:w-[270px] w-[120px] min-w-[170px] bg-opacity-[100%] rounded-xl mb-0">
     <router-link :to="`/preview/${adsData}`" class="flex flex-col gap-0">
       <img src="@/assets/ads-sample.svg" class="aspect-square object-cover w-full" alt="" />
       <div class="flex justify-end">

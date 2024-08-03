@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-[50px] w-[90%] mx-auto">
-    <div class="flex items-center justify-between my-6">
+  <div class="my-16 w-screen max-w-screen">
+    <div class="mt-[50px] mb-5 w-[94%] mx-auto flex justify-between items-center">
       <span class="font-nunito font-extrabold text-lg text-primary">{{ headerTitle }}</span>
       <div class="flex gap-2.5 items-center">
-        <button>
+        <button @click="triggerPrev">
           <svg
             width="33"
             height="32"
@@ -26,7 +26,7 @@
             />
           </svg>
         </button>
-        <button>
+        <button @click="triggerNext">
           <svg
             width="33"
             height="32"
@@ -45,16 +45,45 @@
         </button>
       </div>
     </div>
-    <div class="flex overflow-x-auto gap-x-4 gap-y-10 sm:gap-14">
-      <AdsCard v-for="(ads, index) in [1, 2, 3, 4, 5]" :key="ads" :adsData="index" />
-    </div>
+    <Carousel class="relative w-[95%] mx-auto" :opts="{ align: 'start' }">
+      <CarouselContent>
+        <CarouselItem
+          v-for="(_, index) in 10"
+          :key="index"
+          class="md:basis-1/4 lg:basis-1/5 basis-1/2 aspect-square"
+        >
+          <div class="p-1">
+            <AdsCard />
+          </div>
+        </CarouselItem>
+      </CarouselContent>
+      <CarouselPrevious :id="`prev-${props.identity}`" class="hidden" />
+      <CarouselNext :id="`next-${props.identity}`" class="hidden" />
+    </Carousel>
   </div>
 </template>
 
 <script setup lang="ts">
 import AdsCard from './AdsCard.vue'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel'
+import { Card, CardContent } from '@/components/ui/card'
+import { identity } from '@vueuse/core'
 
-defineProps(['headerTitle'])
+const props = defineProps(['headerTitle', 'identity'])
+function triggerPrev() {
+  document.getElementById(`prev-${props.identity}`)?.click()
+  // console.log(props.identity)
+}
+
+function triggerNext() {
+  document.getElementById(`next-${props.identity}`)?.click()
+}
 </script>
 
 <style scoped></style>
