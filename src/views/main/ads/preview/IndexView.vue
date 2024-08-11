@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-[100px] px-16">
+  <div class="pt-[100px] lg:px-16 px-5">
     <div>
       <Breadcrumb>
         <BreadcrumbList>
@@ -28,17 +28,14 @@
       </Breadcrumb>
     </div>
 
-    <div class="flex justify-center gap-10 w-full px-[50px] mt-10">
-      <div class="w-[68%] bg-white rounded-md px-10 py-5">
+    <div class="flex lg:flex-row flex-col justify-center gap-10 w-full lg:px-[50px] mt-10">
+      <div class="lg:w-[68%] bg-white rounded-md lg:px-10 py-5">
         <div class="bg-[#DADADA] rounded-md">
           <Carousel>
             <Slide v-for="slide in 5" :key="slide">
-              <!-- <div
-                class="h-[200px] w-[80%] bg-sc2 text-txtColor rounded-lg flex items-center justify-center text-2xl"
-              ></div> -->
               <img
                 src="@/assets/laptop-detail1.svg"
-                class="aspect-square object-cover w-[70%]"
+                class="aspect-square object-cover w-[80%]"
                 alt=""
               />
             </Slide>
@@ -82,23 +79,27 @@
           </div>
         </div>
         <div class="mt-10">
-          <h2 class="font-plusJakarta font-bold text-3xl mb-5">Specification</h2>
+          <h2 class="font-plusJakarta font-bold lg:text-3xl text-xl lg:mb-5 mb-2.5">
+            Specification
+          </h2>
           <Divider />
-          <div class="flex justify-between font-plusJakarta font-semibold mt-5 text-base">
-            <div class="flex gap-3">
+          <div
+            class="flex justify-between font-plusJakarta font-semibold mt-5 lg:text-base text-xs"
+          >
+            <div class="flex items-center gap-3">
               <Icon icon="category" />
               <p class="">CATEGORY: <span>Gadgets</span></p>
             </div>
-            <div class="flex gap-3">
+            <div class="flex items-center gap-3">
               <Icon icon="tag" />
               <p class="">BRAND: <span>Apple</span></p>
             </div>
-            <div class="flex gap-3">
+            <div class="flex items-center gap-3">
               <Icon icon="condition" />
               <p class="">CONDITION: <span>Brand New</span></p>
             </div>
           </div>
-          <div class="flex flex-col font-plusJakarta text-[16px] my-10">
+          <div class="lg:flex hidden flex-col font-plusJakarta text-[16px] my-10">
             <div class="flex justify-between">
               <div class="flex">
                 <span>MODEL:</span>
@@ -146,7 +147,7 @@
           </div>
         </div>
       </div>
-      <div class="bg-white w-[32%] rounded-md px-5 py-7 flex flex-col gap-2">
+      <div class="bg-white w-[32%] rounded-md px-5 py-7 lg:flex hidden flex-col gap-2">
         <div class="flex justify-between items-center">
           <Icon icon="promoteBadge" class="h-10" />
           <Icon icon="fav" />
