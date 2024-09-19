@@ -10,9 +10,9 @@ import { icons } from './IconsItems'
 const props = defineProps({
   icon: String
 })
-const iconName: any = computed(() => props.icon)
+const icon: any = props.icon
 const svgContent = computed(() => {
-  return icons[iconName] || ''
+  return icons[icon] || ''
 })
 </script>
 

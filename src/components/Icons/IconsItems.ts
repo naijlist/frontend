@@ -1,4 +1,4 @@
-export const icons: any | undefined = {
+export const icons: string | any = {
   promoteBadge: `<svg width="30" height="29" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1228_14693)">
 <g clip-path="url(#clip1_1228_14693)">
