@@ -57,7 +57,6 @@
 </template>
 
 <script setup lang="ts">
-import CategoryItem from './CategoryItem.vue'
 import {
   Carousel,
   CarouselContent,

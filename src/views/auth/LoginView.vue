@@ -9,7 +9,7 @@ import { useAuthStore } from '../../stores/auth.store'
 import { Button } from '@/components/ui/button'
 import { FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import Loader from '../../components/Shared/Loader.vue'
+// import Loader from '../../components/Shared/LoaderComponent.vue'
 import { usePOST } from '@/hooks/usePOST'
 
 const router = useRouter()
@@ -30,7 +30,7 @@ const { handleSubmit } = useForm({
   validationSchema: formSchema
 })
 
-const onSubmit = handleSubmit((values) => {
+const onSubmit = handleSubmit((values: any) => {
   mutate(values, {
     onSuccess: (returnedData: any) => {
       login(returnedData)
@@ -203,7 +203,7 @@ const onSubmit = handleSubmit((values) => {
                   <FormControl>
                     <Input
                       type="text"
-                      :class="`focus:outline-none border ${componentField?.error ? 'border-red-600' : 'border-textColor'} rounded-md w-[350px] px-5 py-2`"
+                      :class="`focus:outline-none border  border-textColor rounded-md w-[350px] px-5 py-2`"
                       placeholder="Email"
                       v-bind="componentField"
                     />
