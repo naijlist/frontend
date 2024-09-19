@@ -5,7 +5,7 @@ import AdsGrid from './../components/Ads/AdsGrid.vue'
 </script>
 
 <template>
-  <main class="pt-[80px] w-screen max-screen max-w-screen overflow-hidden">
+  <main class="w-screen max-screen max-w-screen overflow-hidden">
     <HeroComponent />
     <CategoriesGrid />
     <AdsGrid :headerTitle="`Featured Ads`" :identity="`one`" />

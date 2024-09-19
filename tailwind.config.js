@@ -79,7 +79,9 @@ module.exports = {
         nunito: ['Nunito', 'sans-serif'],
         josefineSans: ['Josefin Sans', 'sans-serif'],
         plusJakarta: ['Plus Jakarta Sans', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif']
+        poppins: ['Poppins', 'sans-serif'],
+        sora: ['Sora', 'sans-serif'],
+        inter: ['Inter', 'sans-serif']
       },
       keyframes: {
         'accordion-down': {

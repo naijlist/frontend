@@ -1,3 +1,45 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useForm } from 'vee-validate'
+import { toTypedSchema } from '@vee-validate/zod'
+import * as z from 'zod'
+import { useRouter } from 'vue-router'
+import AuthCard from '../../components/Auth/FormCard.vue'
+import { useAuthStore } from '../../stores/auth.store'
+import { Button } from '@/components/ui/button'
+import { FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import Loader from '../../components/Shared/Loader.vue'
+import { usePOST } from '@/hooks/usePOST'
+
+const router = useRouter()
+const { mutate, isPending } = usePOST('auth/login')
+const showPassword = ref(false)
+const { login } = useAuthStore()
+const toggleShowPassword = () => {
+  showPassword.value = !showPassword.value
+}
+const formSchema = toTypedSchema(
+  z.object({
+    email: z.string({ required_error: 'Email field is required' }).email().min(2).max(50),
+    password: z.string({ required_error: 'Password is required' })
+  })
+)
+
+const { handleSubmit } = useForm({
+  validationSchema: formSchema
+})
+
+const onSubmit = handleSubmit((values) => {
+  mutate(values, {
+    onSuccess: (returnedData: any) => {
+      login(returnedData)
+      router.push('/')
+    }
+  })
+})
+</script>
+
 <template>
   <div class="flex justify-between w-screen h-screen sm:bg-pc font-plusJakarta">
     <div class="w-full h-full sm:flex hidden items-center justify-center">
@@ -66,7 +108,7 @@
             <span class="h-[0.3px] w-[40%] bg-textColor"></span>
           </div>
 
-          <form action="">
+          <!-- <form action="" @submit="handleLogin">
             <div class="flex flex-col items-center">
               <div class="flex flex-col gap-7">
                 <div>
@@ -153,6 +195,105 @@
                 <button class="bg-[#050004] w-[350px] text-white py-2 rounded-md">Sign in</button>
               </div>
             </div>
+          </form> -->
+          <form @submit="onSubmit">
+            <div class="w-[350px] flex flex-col gap-7">
+              <FormField v-slot="{ componentField }" name="email" class="w-full">
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      type="text"
+                      :class="`focus:outline-none border ${componentField?.error ? 'border-red-600' : 'border-textColor'} rounded-md w-[350px] px-5 py-2`"
+                      placeholder="Email"
+                      v-bind="componentField"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+
+              <FormField v-slot="{ componentField }" name="password">
+                <FormItem>
+                  <FormControl>
+                    <div
+                      class="flex items-center border border-textColor rounded-md w-[350px] px-5 py-2"
+                    >
+                      <input
+                        :type="showPassword ? 'text' : 'password'"
+                        class="focus:outline-none flex-1"
+                        v-bind="componentField"
+                        placeholder="Password"
+                      />
+                      <span v-if="showPassword" @click="toggleShowPassword" class="cursor-pointer">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M22 8C22 8 18 14 12 14C6 14 2 8 2 8"
+                            stroke="black"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M15 13.5L16.5 16"
+                            stroke="black"
+                            stroke-width="1.5"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M20 11L22 13"
+                            stroke="black"
+                            stroke-width="1.5"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M2 13L4 11"
+                            stroke="black"
+                            stroke-width="1.5"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M9 13.5L7.5 16"
+                            stroke="black"
+                            stroke-width="1.5"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <span v-else @click="toggleShowPassword" class="cursor-pointer">
+                        <svg
+                          width="23"
+                          height="23"
+                          viewBox="0 0 23 23"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.9811 10.808C20.252 11.1879 20.3874 11.3779 20.3874 11.6591C20.3874 11.9402 20.252 12.1302 19.9811 12.5101C18.7637 14.2172 15.6547 17.8971 11.4759 17.8971C7.29715 17.8971 4.18821 14.2172 2.97085 12.5101C2.69992 12.1302 2.56445 11.9402 2.56445 11.6591C2.56445 11.3779 2.69992 11.1879 2.97085 10.808C4.18821 9.10096 7.29715 5.42102 11.4759 5.42102C15.6547 5.42102 18.7637 9.10096 19.9811 10.808Z"
+                            stroke="black"
+                            stroke-width="1.33672"
+                          />
+                          <path
+                            d="M14.1496 11.659C14.1496 10.1825 12.9527 8.9856 11.4762 8.9856C9.99964 8.9856 8.80273 10.1825 8.80273 11.659C8.80273 13.1356 9.99964 14.3325 11.4762 14.3325C12.9527 14.3325 14.1496 13.1356 14.1496 11.659Z"
+                            stroke="black"
+                            stroke-width="1.33672"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+            </div>
+            <div class="mt-10">
+              <Button class="bg-[#050004] w-[350px] text-white py-2 rounded-md">{{
+                isPending ? 'loading...' : 'Sign in'
+              }}</Button>
+            </div>
           </form>
           <div class="mt-5">
             <p class="text-sm">
@@ -165,15 +306,5 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-import AuthCard from '../../components/Auth/FormCard.vue'
-const showPassword = ref(false)
-
-const toggleShowPassword = () => {
-  showPassword.value = !showPassword.value
-}
-</script>
 
 <style scoped></style>

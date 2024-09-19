@@ -1,7 +1,7 @@
 <template>
-  <main class="bg-bgColor w-screen max-w-screen overflow-hidden">
+  <main class="bg-bgColor w-full max-w-full overflow-hidden">
     <AppNavber />
-    <div class="w-[100%] max-w-[100% overflow-hidden]">
+    <div class="w-full max-w-full pt-[80px]">
       <router-view />
     </div>
     <!-- <AppFooter /> -->
