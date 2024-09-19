@@ -53,7 +53,7 @@ const onSubmit = handleSubmit((values: any) => {
     <div class="w-full flex justify-center items-center">
       <div>
         <auth-card>
-          <h2 class="text-pc2 text-4xl font-bold">LOGIN</h2>
+          <h2 class="text-pc2 text-4xl font-bold">Login</h2>
           <p class="text-textColor text-sm mt-5">Your naijlist account awaits you</p>
           <button
             class="flex gap-10 items-center px-4 py-2 border border-textColor w-[320px] rounded-md text-sm mt-[50px]"
