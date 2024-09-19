@@ -1,7 +1,7 @@
 <template>
-  <main class="bg-bgColor w-screen max-w-screen overflow-hidden">
-    <AppNavber />
-    <div class="w-[100%] max-w-[100% overflow-hidden]">
+  <main class="bg-bgColor w-full max-w-full overflow-hidden">
+    <AppNavbar />
+    <div class="w-full max-w-full pt-[80px]">
       <router-view />
     </div>
     <!-- <AppFooter /> -->
@@ -9,8 +9,8 @@
 </template>
 
 <script setup lang="ts">
-import AppNavber from '../components/Shared/AppNavber.vue'
-import AppFooter from '../components/Shared/AppFooter.vue'
+import AppNavbar from '../components/Shared/AppNavbar.vue'
+// import AppFooter from '../components/Shared/AppFooter.vue'
 </script>
 
 <style scoped></style>

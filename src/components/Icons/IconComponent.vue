@@ -8,13 +8,11 @@ import { computed } from 'vue'
 import { icons } from './IconsItems'
 
 const props = defineProps({
-  icon: {
-    type: String
-  }
+  icon: String
 })
-
+const iconName: any = computed(() => props.icon)
 const svgContent = computed(() => {
-  return icons[props.icon] || ''
+  return icons[iconName] || ''
 })
 </script>
 

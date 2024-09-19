@@ -18,24 +18,25 @@
         </span>
         post Ads</router-link
       >
-      <router-link class="flex gap-3 bg-[#000000] rounded-md px-3 py-2 text-white" to="/post-ads">
-        <span>
-          <Icon icon="user" />
-        </span>
-        Account</router-link
-      >
-      <router-link class="flex gap-3" to="/post-ads">
+      <AccountButton :isLoggedIn="isLoggedIn" />
+      <router-link class="flex gap-3" to="/post-ads" v-if="isLoggedIn">
         <span>
           <Icon icon="wishList" />
         </span>
-        Wishlist</router-link
-      >
+        Wishlist
+      </router-link>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import Icon from '../Icons/IconComponent.vue'
+import AccountButton from './AccountButton.vue'
+import { useAuthStore } from '../../stores/auth.store'
+import { computed } from 'vue'
+
+const authStore = useAuthStore()
+const isLoggedIn = computed(() => authStore.loggedIn)
 </script>
 
 <style scoped></style>

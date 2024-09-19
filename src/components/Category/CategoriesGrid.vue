@@ -34,7 +34,7 @@
           :key="index"
           class="md:basis-[100px] basis-[80px] lg:basis-[150px] py-2"
         >
-          <router-link :to="category.title">
+          <router-link to="/">
             <Card class="hover:shadow-xl border-none p-0 cursor-pointer">
               <CardContent class="flex aspect-square items-center justify-center p-0">
                 <div class="flex flex-col justify-center items-center gap-3">
@@ -57,7 +57,6 @@
 </template>
 
 <script setup lang="ts">
-import CategoryItem from './CategoryItem.vue'
 import {
   Carousel,
   CarouselContent,
