@@ -26,7 +26,7 @@ export const usePOST = (
     onError: (error: any) => {
       const { response } = error
 
-      toast({ title: 'Error', description: response.data.message })
+      toast({ variant: 'destructive', title: 'Error', description: response.data.message })
     }
   })
 
