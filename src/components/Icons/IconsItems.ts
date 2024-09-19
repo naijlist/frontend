@@ -99,7 +99,7 @@ export const icons: string | any = {
 </defs>
 </svg>
 `,
-  user: `<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  user: `<svg width="25" height="24" viewBox="0 0 25 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.31683 15.4816C5.90206 16.324 2.19262 18.0441 4.45192 20.1966C5.55557 21.248 6.78475 22 8.33013 22H17.1484C18.6938 22 19.923 21.248 21.0266 20.1966C23.2859 18.0441 19.5765 16.324 18.1617 15.4816C14.8441 13.5061 10.6345 13.5061 7.31683 15.4816Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M17.2393 6.5C17.2393 8.98528 15.2246 11 12.7393 11C10.254 11 8.23926 8.98528 8.23926 6.5C8.23926 4.01472 10.254 2 12.7393 2C15.2246 2 17.2393 4.01472 17.2393 6.5Z" stroke="white" stroke-width="1.5"/>
 </svg>
