@@ -1,7 +1,7 @@
 <template>
   <main class="bg-bgColor w-full max-w-full overflow-hidden">
     <AppNavbar />
-    <div class="fixed z-[1000]">
+    <div class="fixed z-[1000] sm:hidden block">
       <BottomNavigation />
     </div>
     <div class="w-full max-w-full pt-[80px]">

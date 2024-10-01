@@ -6,7 +6,8 @@ import AuthLayout from '../layout/AuthLayout.vue'
 import DashboardLayout from '../layout/DashboardLayout.vue'
 import LoginView from '../views/auth/LoginView.vue'
 import DashboardView from '@/views/main/dashboard/DashboardView.vue'
-
+import MyAds from '@/views/main/dashboard/MyAds.vue'
+import ResetPasswordLayout from '@/layout/ResetPasswordLayout.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -24,6 +25,31 @@ const router = createRouter({
           path: '/register',
           name: 'Register',
           component: () => import('../views/auth/RegisterView.vue')
+        }
+      ]
+    },
+
+    {
+      path: '/reset',
+      name: 'Reset',
+      component: ResetPasswordLayout,
+      props: true,
+      children: [
+        {
+          path: '/send-otp',
+          name: 'SendOtp',
+          component: () => import('../views/auth/reset/SenMailView.vue')
+        },
+
+        {
+          path: '/reset-password',
+          name: 'ResetPassword',
+          component: () => import('../views/auth/reset/OtpView.vue')
+        },
+        {
+          path: '/set-new-password',
+          name: 'SetPassword',
+          component: () => import('../views/auth/reset/ResetPasswordView.vue')
         }
       ]
     },
@@ -60,6 +86,11 @@ const router = createRouter({
           path: '',
           name: 'Dashboard',
           component: DashboardView
+        },
+        {
+          path: '/my-ads',
+          name: 'My Ads',
+          component: MyAds
         }
       ]
     }
