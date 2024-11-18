@@ -6,8 +6,9 @@ import AuthLayout from '../layout/AuthLayout.vue'
 import DashboardLayout from '../layout/DashboardLayout.vue'
 import LoginView from '../views/auth/LoginView.vue'
 import DashboardView from '@/views/main/dashboard/DashboardView.vue'
-import MyAds from '@/views/main/dashboard/MyAds.vue'
+import MyAds from '@/views/main/dashboard/MyAds/MyAds.vue'
 import ResetPasswordLayout from '@/layout/ResetPasswordLayout.vue'
+import CreateAdvert from '@/views/main/dashboard/MyAds/CreateAdvert.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -91,6 +92,11 @@ const router = createRouter({
           path: '/my-ads',
           name: 'My Ads',
           component: MyAds
+        },
+        {
+          path: '/create-advert',
+          name: 'Create Advert',
+          component: CreateAdvert
         }
       ]
     }

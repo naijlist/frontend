@@ -4,7 +4,7 @@
     <div class="fixed z-[1000] sm:hidden block">
       <BottomNavigation />
     </div>
-    <div class="w-full max-w-full pt-[80px]">
+    <div class="w-full max-w-full pt-[40px]">
       <router-view />
     </div>
     <!-- <AppFooter /> -->

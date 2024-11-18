@@ -1,9 +1,9 @@
 <template>
   <div
-    class="bg-primary fixed z-10 flex w-screen items-center lg:justify-around font-nunito lg:px-0 px-10"
+    class="bg-primary fixed z-10 flex w-screen items-center lg:justify-around font-nunito lg:px-0 px-10 py-2"
   >
     <div>
-      <img src="@/assets/logo.svg" class="w-[120px] h-[80px]" alt="" />
+      <img src="@/assets/SVG/White_on_black.svg" class="w-[150px] h-[80px] aspect-square" alt="" />
     </div>
     <div class="lg:flex items-center gap-10 text-white hidden">
       <router-link to="/about">About</router-link>
@@ -12,7 +12,10 @@
     </div>
 
     <div class="lg:flex hidden items-center lg:gap-10 gap-5">
-      <router-link class="flex gap-3 border border-white rounded-md px-3 py-2" to="/post-ads">
+      <router-link
+        class="flex gap-3 border border-white text-white rounded-md px-3 py-2"
+        to="/post-ads"
+      >
         <span>
           <Icon icon="plus" />
         </span>
