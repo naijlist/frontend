@@ -1,3 +1,4 @@
+import { useAuthStore } from '@/stores/auth.store'
 import axios, { type AxiosInstance } from 'axios'
 
 // Dynamic axios instance function
@@ -11,9 +12,8 @@ export const createApiInstance = (baseURL: string): AxiosInstance => {
 
   // Request interceptor to add Authorization header if token exists
   apiInstance.interceptors.request.use(async (config) => {
-    //  const userToken = useAppStore.getState().user?.token
-    const userToken = 'kkdhgdgdhgvsdhasg'
-
+    const authStore = useAuthStore()
+    const userToken = authStore?.userToken
     if (userToken) {
       config.headers['Authorization'] = `Bearer ${userToken}`
     }

@@ -27,23 +27,24 @@
     <Carousel
       class="relative w-full max-w-[95%] md:max-w-[85%] mx-auto mt-2 bg-white rounded-md"
       :opts="{ align: 'start' }"
+      v-if="!isPending"
     >
       <CarouselContent>
         <CarouselItem
-          v-for="(category, index) in categories"
+          v-for="(category, index) in categories?.data?.categories"
           :key="index"
           class="md:basis-[100px] basis-[80px] lg:basis-[150px] py-2"
         >
-          <router-link to="/">
+          <router-link :to="`/category-deteils/${category.name}`">
             <Card class="hover:shadow-xl border-none p-0 cursor-pointer">
               <CardContent class="flex aspect-square items-center justify-center p-0">
                 <div class="flex flex-col justify-center items-center gap-3">
                   <img
-                    :src="category.icon"
-                    :alt="category.title"
+                    :src="category.imageUrl"
+                    :alt="category.name"
                     class="aspect-square lg:w-[60px] w-[40px]"
                   />
-                  <span class="lg:text-xs text-[9px]">{{ category.title }}</span>
+                  <span class="lg:text-xs text-[9px]">{{ category.name }}</span>
                 </div>
               </CardContent>
             </Card>
@@ -65,64 +66,13 @@ import {
   CarouselPrevious
 } from '@/components/ui/carousel'
 import { Card, CardContent } from '@/components/ui/card'
-const categories = [
-  {
-    title: 'phones',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824669/phone_kutnkd.png'
-  },
-  {
-    title: 'laptops',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824671/laptop_fadurm.png'
-  },
-  {
-    title: 'gadgets',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824673/gadget_wdib7t.png'
-  },
-  {
-    title: 'properties',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824669/house_ecsqzs.png'
-  },
-  {
-    title: 'fashion',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824673/fashion-design_iysmwy.png'
-  },
-  {
-    title: 'funiture',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824672/furnitures_ho16la.png'
-  },
-  {
-    title: 'pets',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824671/pets_xtz7i9.png'
-  },
-  {
-    title: 'cars',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824672/car_kksnkj.png'
-  },
-  {
-    title: 'bike',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824674/bike_z2hptm.png'
-  },
-  {
-    title: 'job',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824671/job-seeker_p00xbj.png'
-  },
-  {
-    title: 'jewerries',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824670/jewellery_c47pub.png'
-  },
-  {
-    title: 'Health beauty ',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824669/shampoo_cljkdi.png'
-  },
-  {
-    title: 'Sport outdoor',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824670/sport_rqxnhu.png'
-  },
-  {
-    title: 'Food',
-    icon: 'https://res.cloudinary.com/dfeiu916l/image/upload/v1716824671/wheat-sack_fn6mqm.png'
-  }
-]
+import { useGET } from '@/hooks/useGET'
+
+const { data: categories, isPending } = useGET({
+  url: 'category',
+  queryKey: ['GET_ALL_CATEGORIES_IN_CATEGORIES_GRID']
+})
+console.log(categories, '<<<<<<<')
 </script>
 
 <style scoped>

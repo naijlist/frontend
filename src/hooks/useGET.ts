@@ -1,5 +1,6 @@
 import { createApiInstance } from '@/config/axiosInstance'
 import { useQuery } from '@tanstack/vue-query'
+import type { Ref } from 'vue'
 export function useGET({
   baseURL,
   url,
@@ -8,7 +9,7 @@ export function useGET({
 }: {
   baseURL?: string
   url: string
-  enabled?: boolean
+  enabled?: Ref<boolean>
   queryKey: any[]
 }) {
   const { data, isPending, isError, refetch, isRefetching, isRefetchError } = useQuery({
