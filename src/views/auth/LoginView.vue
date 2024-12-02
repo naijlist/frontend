@@ -45,7 +45,7 @@ const onSubmit = handleSubmit((values: any) => {
 
 <template>
   <div class="flex justify-between w-screen h-screen sm:bg-pc font-plusJakarta">
-    <div class="w-full h-full sm:flex hidden items-center justify-center">
+    <div class="w-full h-full sm:flex hidden items-center justify-center bg-slate-400">
       <div class="text-white w-[400px] flex flex-col gap-3">
         <h1 class="text-5xl font-bold leading-[65px]">Your Gateway to Great Deals</h1>
         <p class="w-[300px]">

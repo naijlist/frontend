@@ -3,7 +3,7 @@
     class="bg-primary fixed z-10 flex w-screen items-center lg:justify-around font-nunito lg:px-0 px-10 py-2"
   >
     <div>
-      <img src="@/assets/SVG/White_on_black.svg" class="w-[150px] h-[80px] aspect-square" alt="" />
+      <img src="@/assets/svg/logo_white.svg" class="w-[150px] h-[80px] aspect-square" alt="" />
     </div>
     <div class="lg:flex items-center gap-10 text-white hidden">
       <router-link to="/about">About</router-link>
