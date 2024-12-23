@@ -9,7 +9,7 @@ export function useGET({
 }: {
   baseURL?: string
   url: string
-  enabled?: Ref<boolean>
+  enabled?: boolean
   queryKey: any[]
 }) {
   const { data, isPending, isError, refetch, isRefetching, isRefetchError } = useQuery({

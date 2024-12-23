@@ -7,6 +7,7 @@ const props = defineProps<{
   defaultValue?: string | number
   modelValue?: string | number
   class?: HTMLAttributes['class']
+  inputRef?: any
 }>()
 
 const emits = defineEmits<{
@@ -21,6 +22,7 @@ const modelValue = useVModel(props, 'modelValue', emits, {
 
 <template>
   <input
+    ref="inputRef"
     v-model="modelValue"
     :class="
       cn(
