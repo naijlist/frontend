@@ -81,7 +81,7 @@ const router = createRouter({
       path: '/dashboard',
       name: 'Dashboard',
       component: DashboardLayout,
-      meta: { requiresAuth: true }, // Add meta field to protect the route
+      meta: { requiresAuth: true },
       children: [
         {
           path: '',
@@ -95,7 +95,7 @@ const router = createRouter({
         },
         {
           path: '/create-advert',
-          name: 'Create Advert',
+          name: 'Create-Advert',
           component: CreateAdvert
         }
       ]

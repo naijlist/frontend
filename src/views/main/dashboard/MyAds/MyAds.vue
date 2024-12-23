@@ -22,8 +22,10 @@
       <router-link
         to="/create-advert"
         class="bg-primary flex items-center gap-3 px-5 py-1 text-white rounded-lg"
-        ><IconComponent icon="plus" /> Create new ads</router-link
       >
+        <IconComponent icon="plus" /> Create new ads
+      </router-link>
+      <CreateAdsDialog />
     </div>
   </div>
 </template>
@@ -32,5 +34,5 @@
 import StatiscticsCard from '@/components/Dashboard/StatiscticsCard.vue'
 import { Separator } from '@/components/ui/separator'
 import TagComponent from '@/components/Shared/TagComponent.vue'
-import IconComponent from '@/components/Icons/IconComponent.vue'
+import CreateAdsDialog from './components/CreateAdsDialog.vue'
 </script>
