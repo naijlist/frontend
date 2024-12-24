@@ -9,6 +9,7 @@ import { useAuthStore } from '@/stores/auth.store'
 import { usePOST } from '@/hooks/usePOST'
 import { stringify } from 'querystring'
 import SelectCategory from './components/SelectLocation.vue'
+import BackButton from '@/components/Shared/BackButton.vue'
 type subCategoryType = {
   _id: any
   name: string
@@ -223,7 +224,8 @@ const handleImageRemove = (index: number) => {
 </script>
 
 <template>
-  <div>
-    <TagComponent title="Create new Advert" :color="`bg-[#CABDFF]`" />
+  <div class="flex justify-between items-center">
+    <TagComponent title="New Ads" :color="`bg-[#CABDFF]`" />
+    <BackButton />
   </div>
 </template>
