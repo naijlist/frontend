@@ -121,6 +121,7 @@ const handleImageAdd = (event: Event) => {
   if (files) {
     for (const file of files) {
       images.value.push(file)
+      ads_store.addImage(file)
       imagePreviews.value.push(URL.createObjectURL(file))
     }
   }
